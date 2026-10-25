@@ -13,9 +13,9 @@ description: Install Zotero, capture your first sources, and bring order to your
 
 | # | Lesson | Time | Moves milestone |
 |---|---|---|---|
-| 1 | [Install Zotero and the browser connector](install-zotero.html) | 6 min | M1 (setup) |
-| 2 | [Save your first sources from the web](save-first-sources.html) | 7 min | **M1 — first capture** |
-| 3 | [Add PDFs and retrieve metadata](add-pdfs.html) | 5 min | M2 (setup) |
-| 4 | [Organize with collections and tags](collections-and-tags.html) | 6 min | **M2 — working collection** |
+| 1 | [Install Zotero and the browser connector](getting-started/install-zotero.html) | 6 min | M1 (setup) |
+| 2 | [Save your first sources from the web](getting-started/save-first-sources.html) | 7 min | **M1 — first capture** |
+| 3 | [Add PDFs and retrieve metadata](getting-started/add-pdfs.html) | 5 min | M2 (setup) |
+| 4 | [Organize with collections and tags](getting-started/collections-and-tags.html) | 6 min | **M2 — working collection** |
 
 **Why this path exists:** the browser connector is the single largest category in the [support question analysis]({{ "about/method.html" | relative_url }}) — 20 of 128 questions — and week-1 questions cluster here. Do lessons 1–2 in one sitting if you can; milestone M1 is the foundation for everything else.

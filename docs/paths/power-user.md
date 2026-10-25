@@ -13,8 +13,8 @@ description: Sync across devices, work with PDF annotations, and run a group lib
 
 | # | Lesson | Time | Moves milestone |
 |---|---|---|---|
-| 9 | [Sync your library across devices](sync-across-devices.html) | 7 min | **M5 — sync set up** |
-| 10 | [Annotate PDFs and extract notes](annotate-and-extract.html) | 6 min | E1 (extended) |
-| 11 | [Group libraries for research teams](group-libraries.html) | 7 min | E2 (extended) |
+| 9 | [Sync your library across devices](power-user/sync-across-devices.html) | 7 min | **M5 — sync set up** |
+| 10 | [Annotate PDFs and extract notes](power-user/annotate-and-extract.html) | 6 min | E1 (extended) |
+| 11 | [Group libraries for research teams](power-user/group-libraries.html) | 7 min | E2 (extended) |
 
 **Why this path exists:** sync, storage and PDF questions together account for 32 of the 128 questions in the [support analysis]({{ "about/method.html" | relative_url }}) — 25%. These lessons teach the decisions (Zotero storage vs. WebDAV; annotations live in Zotero, not the PDF) before they become support tickets. Milestones E1–E2 are *extended* milestones: they matter for long-term adoption, not first-week value.

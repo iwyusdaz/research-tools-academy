@@ -30,18 +30,9 @@ gh_edit_link: false
 
 # Exclude from Pages build
 exclude:
-  - analysis/
-  - evaluation/
   - node_modules/
   - dry-run/
   - package.json
-  - README.md
-  - ATTRIBUTION.md
-  - CHANGELOG.md
-  - DECISIONS.md
-  - STATUS.md
-  - LICENSE
-  - LICENSE-CODE
   - "*.tmp"
 
 plugins:
