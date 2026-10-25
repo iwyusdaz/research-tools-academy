@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 280" width="720" height="280" role="img" aria-labelledby="f-bib-refresh-t f-bib-refresh-d">
+<title id="f-bib-refresh-t">Schematic: a bibliography in the document and the Refresh button that keeps it current</title>
+<desc id="f-bib-refresh-d">A document page ending with a Bibliography heading and entries. An arrow points from the Refresh button in the Word Zotero tab to the bibliography: refreshing updates every citation and the bibliography after you edit items in Zotero.</desc>
+<rect x="0" y="0" width="720" height="280" fill="#ffffff"></rect>
+<rect x="40" y="40" width="400" height="190" rx="6" fill="#f4f7fa" stroke="#5a6b7b" stroke-width="1.5"></rect>
+<text x="60" y="66" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#44566b" text-anchor="start">…body of your document</text>
+<text x="60" y="100" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2d3d" text-anchor="start">Bibliography</text>
+<text x="60" y="126" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#44566b" text-anchor="start">Nguyen, T. (2024). Wetland carbon…</text>
+<text x="60" y="150" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#44566b" text-anchor="start">Okafor, B. (2023). Policy design…</text>
+<text x="60" y="174" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#44566b" text-anchor="start">Silva, R. (2025). Carbon markets…</text>
+<rect x="540" y="60" width="140" height="54" rx="6" fill="#e2ebf3" stroke="#1a4f72" stroke-width="2"></rect>
+<text x="610" y="92" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2d3d" text-anchor="middle">Refresh</text>
+<line x1="540" y1="110" x2="430" y2="150" stroke="#5a6b7b" stroke-width="1.5"></line>
+<line x1="610" y1="170" x2="590" y2="118" stroke="#1f2d3d" stroke-width="1.2"></line>
+<circle cx="610" cy="170" r="11" fill="#ffffff" stroke="#1f2d3d" stroke-width="2"></circle>
+<text x="610" y="174.5" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#1f2d3d" text-anchor="middle">1</text>
+<line x1="90" y1="260" x2="100" y2="232" stroke="#1f2d3d" stroke-width="1.2"></line>
+<circle cx="90" cy="260" r="11" fill="#ffffff" stroke="#1f2d3d" stroke-width="2"></circle>
+<text x="90" y="264.5" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#1f2d3d" text-anchor="middle">2</text>
+<text x="40" y="264" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#44566b" text-anchor="start" font-style="italic">1. Refresh re-reads Zotero   2. Bibliography updates in place</text>
+</svg>

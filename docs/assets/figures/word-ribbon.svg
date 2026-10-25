@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 292" width="720" height="292" role="img" aria-labelledby="f-word-ribbon-t f-word-ribbon-d">
+<title id="f-word-ribbon-t">Schematic: the Zotero tab in the Word ribbon</title>
+<desc id="f-word-ribbon-d">The Word ribbon with a Zotero tab containing five buttons: Add/Edit Citation, Add/Edit Bibliography, Document Preferences, Refresh, and Unlink Citations.</desc>
+<rect x="0" y="0" width="720" height="292" fill="#ffffff"></rect>
+<rect x="40" y="50" width="640" height="44" rx="6" fill="#f4f7fa" stroke="#5a6b7b" stroke-width="1.5"></rect>
+<text x="70" y="77" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#44566b" text-anchor="start">Home</text>
+<text x="140" y="77" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#44566b" text-anchor="start">Insert</text>
+<text x="210" y="77" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#44566b" text-anchor="start">References</text>
+<text x="310" y="77" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#44566b" text-anchor="start">Mailings</text>
+<rect x="400" y="54" width="90" height="36" rx="4" fill="#ffffff" stroke="#1a4f72" stroke-width="2"></rect>
+<text x="445" y="77" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2d3d" text-anchor="middle">Zotero</text>
+<text x="530" y="77" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#44566b" text-anchor="start">View</text>
+<rect x="60" y="120" width="120" height="60" rx="6" fill="#e2ebf3" stroke="#1a4f72" stroke-width="2"></rect>
+<text x="120" y="155" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#1f2d3d" text-anchor="middle">Add/Edit Citation</text>
+<rect x="196" y="120" width="130" height="60" rx="6" fill="#f4f7fa" stroke="#5a6b7b" stroke-width="1.5"></rect>
+<text x="261" y="155" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#1f2d3d" text-anchor="middle">Add/Edit Bibliography</text>
+<rect x="342" y="120" width="130" height="60" rx="6" fill="#f4f7fa" stroke="#5a6b7b" stroke-width="1.5"></rect>
+<text x="407" y="155" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#1f2d3d" text-anchor="middle">Document Preferences</text>
+<rect x="488" y="120" width="90" height="60" rx="6" fill="#f4f7fa" stroke="#5a6b7b" stroke-width="1.5"></rect>
+<text x="533" y="155" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#1f2d3d" text-anchor="middle">Refresh</text>
+<rect x="594" y="120" width="100" height="60" rx="6" fill="#f4f7fa" stroke="#5a6b7b" stroke-width="1.5"></rect>
+<text x="644" y="155" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#1f2d3d" text-anchor="middle">Unlink Citations</text>
+<line x1="620" y1="30" x2="470" y2="54" stroke="#1f2d3d" stroke-width="1.2"></line>
+<circle cx="620" cy="30" r="11" fill="#ffffff" stroke="#1f2d3d" stroke-width="2"></circle>
+<text x="620" y="34.5" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#1f2d3d" text-anchor="middle">1</text>
+<line x1="120" y1="210" x2="120" y2="182" stroke="#1f2d3d" stroke-width="1.2"></line>
+<circle cx="120" cy="210" r="11" fill="#ffffff" stroke="#1f2d3d" stroke-width="2"></circle>
+<text x="120" y="214.5" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#1f2d3d" text-anchor="middle">2</text>
+<text x="40" y="250" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#44566b" text-anchor="start" font-style="italic">1. The Zotero tab appears in the ribbon   2. Add/Edit Citation inserts a citation at the cursor</text>
+<text x="40" y="268" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#44566b" text-anchor="start" font-style="italic">No Zotero tab at all? Troubleshooting tool, flow: The Zotero tab is missing in Word.</text>
+</svg>

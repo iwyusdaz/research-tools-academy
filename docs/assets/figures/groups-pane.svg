@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 280" width="720" height="280" role="img" aria-labelledby="f-groups-pane-t f-groups-pane-d">
+<title id="f-groups-pane-t">Schematic: group libraries under My Library in the left pane</title>
+<desc id="f-groups-pane-d">The left pane of Zotero with My Library and its collections, and below it a Group library named Lab Reading Group that appears after syncing. Dragging an item from My Library into the group creates a separate copy.</desc>
+<rect x="0" y="0" width="720" height="280" fill="#ffffff"></rect>
+<rect x="40" y="40" width="300" height="190" rx="6" fill="#f4f7fa" stroke="#5a6b7b" stroke-width="1.5"></rect>
+<text x="55" y="66" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2d3d" text-anchor="start">My Library</text>
+<text x="65" y="90" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2d3d" text-anchor="start">Thesis chapter 2</text>
+<text x="55" y="120" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2d3d" text-anchor="start">Lab Reading Group</text>
+<text x="70" y="144" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#1f2d3d" text-anchor="start">Weekly papers</text>
+<line x1="390" y1="90" x2="342" y2="88" stroke="#1f2d3d" stroke-width="1.2"></line>
+<circle cx="390" cy="90" r="11" fill="#ffffff" stroke="#1f2d3d" stroke-width="2"></circle>
+<text x="390" y="94.5" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#1f2d3d" text-anchor="middle">1</text>
+<line x1="390" y1="150" x2="342" y2="148" stroke="#1f2d3d" stroke-width="1.2"></line>
+<circle cx="390" cy="150" r="11" fill="#ffffff" stroke="#1f2d3d" stroke-width="2"></circle>
+<text x="390" y="154.5" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#1f2d3d" text-anchor="middle">2</text>
+<text x="40" y="260" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#44566b" text-anchor="start" font-style="italic">1. Your library   2. Group library (appears once data syncing is on)</text>
+</svg>

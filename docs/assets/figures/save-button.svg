@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 310" width="720" height="310" role="img" aria-labelledby="f-save-button-t f-save-button-d">
+<title id="f-save-button-t">Schematic: the browser save button and the save popup</title>
+<desc id="f-save-button-d">A browser toolbar containing an address bar and the Zotero save button, drawn as a letter Z in a square. Below it, the popup that appears after saving: it names the collection the item was saved to and offers a link to open the Zotero app.</desc>
+<rect x="0" y="0" width="720" height="310" fill="#ffffff"></rect>
+<rect x="40" y="60" width="640" height="52" rx="6" fill="#f4f7fa" stroke="#5a6b7b" stroke-width="1.5"></rect>
+<text x="360" y="91" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2d3d" text-anchor="middle">browser toolbar</text>
+<rect x="120" y="70" width="380" height="32" rx="6" fill="#f4f7fa" stroke="#5a6b7b" stroke-width="1.5"></rect>
+<text x="140" y="90" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#44566b" text-anchor="start">https://example-journal.org/article/1234</text>
+<rect x="540" y="68" width="36" height="36" rx="4" fill="#ffffff" stroke="#1f2d3d" stroke-width="2"></rect>
+<text x="558" y="93" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#1f2d3d" text-anchor="middle">Z</text>
+<rect x="180" y="170" width="360" height="90" rx="6" fill="#e2ebf3" stroke="#1a4f72" stroke-width="2"></rect>
+<text x="360" y="211" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2d3d" text-anchor="middle">Saving to: Thesis chapter 2</text>
+<text x="360" y="229" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#44566b" text-anchor="middle">View · Add tags   |   Open Zotero</text>
+<line x1="500" y1="45" x2="548" y2="66" stroke="#1f2d3d" stroke-width="1.2"></line>
+<circle cx="500" cy="45" r="11" fill="#ffffff" stroke="#1f2d3d" stroke-width="2"></circle>
+<text x="500" y="49.5" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#1f2d3d" text-anchor="middle">1</text>
+<line x1="130" y1="250" x2="178" y2="230" stroke="#1f2d3d" stroke-width="1.2"></line>
+<circle cx="130" cy="250" r="11" fill="#ffffff" stroke="#1f2d3d" stroke-width="2"></circle>
+<text x="130" y="254.5" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#1f2d3d" text-anchor="middle">2</text>
+<text x="40" y="296" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#44566b" text-anchor="start" font-style="italic">1. Save button in the toolbar   2. Popup confirms where the item went</text>
+</svg>

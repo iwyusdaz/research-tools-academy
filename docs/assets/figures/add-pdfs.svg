@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" width="720" height="300" role="img" aria-labelledby="f-add-pdfs-t f-add-pdfs-d">
+<title id="f-add-pdfs-t">Schematic: giving a stray PDF a parent item with metadata</title>
+<desc id="f-add-pdfs-d">A three-step flow. Step one: a lone PDF file is dragged into Zotero. Step two: right-click the PDF and choose Create Parent Item. Step three: enter a DOI or ISBN and Zotero fills in the title, authors and journal automatically.</desc>
+<rect x="0" y="0" width="720" height="300" fill="#ffffff"></rect>
+<rect x="40" y="90" width="180" height="64" rx="6" fill="#f4f7fa" stroke="#5a6b7b" stroke-width="1.5"></rect>
+<text x="130" y="118" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2d3d" text-anchor="middle">draft.pdf</text>
+<text x="130" y="136" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#44566b" text-anchor="middle">attachment, no metadata</text>
+<rect x="280" y="90" width="170" height="64" rx="6" fill="#f4f7fa" stroke="#5a6b7b" stroke-width="1.5"></rect>
+<text x="365" y="118" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2d3d" text-anchor="middle">Create Parent Item</text>
+<text x="365" y="136" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#44566b" text-anchor="middle">right-click menu</text>
+<rect x="500" y="90" width="180" height="64" rx="6" fill="#e2ebf3" stroke="#1a4f72" stroke-width="2"></rect>
+<text x="590" y="118" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2d3d" text-anchor="middle">Enter DOI / ISBN</text>
+<text x="590" y="136" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#44566b" text-anchor="middle">metadata fills in</text>
+<line x1="222" y1="122" x2="278" y2="122" stroke="#5a6b7b" stroke-width="1.5"></line>
+<line x1="452" y1="122" x2="498" y2="122" stroke="#5a6b7b" stroke-width="1.5"></line>
+<line x1="60" y1="50" x2="95" y2="88" stroke="#1f2d3d" stroke-width="1.2"></line>
+<circle cx="60" cy="50" r="11" fill="#ffffff" stroke="#1f2d3d" stroke-width="2"></circle>
+<text x="60" y="54.5" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#1f2d3d" text-anchor="middle">1</text>
+<line x1="300" y1="200" x2="330" y2="156" stroke="#1f2d3d" stroke-width="1.2"></line>
+<circle cx="300" cy="200" r="11" fill="#ffffff" stroke="#1f2d3d" stroke-width="2"></circle>
+<text x="300" y="204.5" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#1f2d3d" text-anchor="middle">2</text>
+<line x1="560" y1="200" x2="555" y2="156" stroke="#1f2d3d" stroke-width="1.2"></line>
+<circle cx="560" cy="200" r="11" fill="#ffffff" stroke="#1f2d3d" stroke-width="2"></circle>
+<text x="560" y="204.5" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#1f2d3d" text-anchor="middle">3</text>
+<text x="40" y="270" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#44566b" text-anchor="start" font-style="italic">Result: the PDF becomes an item with a title, author and year - citable like any other.</text>
+</svg>

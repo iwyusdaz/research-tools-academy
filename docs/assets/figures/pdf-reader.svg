@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" width="720" height="300" role="img" aria-labelledby="f-pdf-reader-t f-pdf-reader-d">
+<title id="f-pdf-reader-t">Schematic: the built-in PDF reader with a highlight and the notes pane</title>
+<desc id="f-pdf-reader-d">The Zotero PDF reader. Center: a page with a highlighted sentence. Right: the Notes pane opened with the Notes button, where Add Item Note from Annotations collects every highlight and note with links back to the page they came from.</desc>
+<rect x="0" y="0" width="720" height="300" fill="#ffffff"></rect>
+<rect x="40" y="40" width="320" height="220" rx="6" fill="#f4f7fa" stroke="#5a6b7b" stroke-width="1.5"></rect>
+<text x="200" y="155" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2d3d" text-anchor="middle">PDF page</text>
+<rect x="70" y="120" width="260" height="22" fill="url(#hlPat)" stroke="#1f2d3d" stroke-width="1"></rect>
+<text x="70" y="136" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#44566b" text-anchor="start">…the highlighted sentence…</text>
+<rect x="420" y="40" width="260" height="220" rx="6" fill="#e2ebf3" stroke="#1a4f72" stroke-width="2"></rect>
+<text x="550" y="146" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2d3d" text-anchor="middle">Notes pane</text>
+<text x="550" y="164" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#44566b" text-anchor="middle">Add Item Note from Annotations</text>
+<text x="440" y="130" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#44566b" text-anchor="start">• highlight → quoted + page link</text>
+<line x1="400" y1="200" x2="332" y2="132" stroke="#1f2d3d" stroke-width="1.2"></line>
+<circle cx="400" cy="200" r="11" fill="#ffffff" stroke="#1f2d3d" stroke-width="2"></circle>
+<text x="400" y="204.5" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#1f2d3d" text-anchor="middle">1</text>
+<line x1="400" y1="60" x2="470" y2="90" stroke="#1f2d3d" stroke-width="1.2"></line>
+<circle cx="400" cy="60" r="11" fill="#ffffff" stroke="#1f2d3d" stroke-width="2"></circle>
+<text x="400" y="64.5" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#1f2d3d" text-anchor="middle">2</text>
+<defs><pattern id="hlPat" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fdf3d7"></rect><line x1="0" y1="0" x2="0" y2="8" stroke="#e0b400" stroke-width="2"></line></pattern></defs>
+<text x="40" y="286" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#44566b" text-anchor="start" font-style="italic">1. Select text to highlight   2. Notes button collects annotations into one note</text>
+</svg>

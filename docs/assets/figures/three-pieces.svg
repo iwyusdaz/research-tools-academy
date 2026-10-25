@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" width="720" height="300" role="img" aria-labelledby="f-three-pieces-t f-three-pieces-d">
+<title id="f-three-pieces-t">Schematic: the three pieces of Zotero</title>
+<desc id="f-three-pieces-d">Three connected boxes: the Zotero desktop app where your library lives; the Zotero Connector in your browser, which sends pages you save to the app; and the word processor plugin inside Microsoft Word, LibreOffice or Google Docs, which pulls citations from the app into your document. Arrows run from the connector and the plugin to the desktop app.</desc>
+<rect x="0" y="0" width="720" height="300" fill="#ffffff"></rect>
+<rect x="30" y="60" width="200" height="84" rx="6" fill="#e2ebf3" stroke="#1a4f72" stroke-width="2"></rect>
+<text x="130" y="98" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2d3d" text-anchor="middle">Zotero desktop app</text>
+<text x="130" y="116" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#44566b" text-anchor="middle">your library, on your computer</text>
+<rect x="30" y="190" width="200" height="70" rx="6" fill="#f4f7fa" stroke="#5a6b7b" stroke-width="1.5"></rect>
+<text x="130" y="221" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2d3d" text-anchor="middle">Zotero Connector</text>
+<text x="130" y="239" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#44566b" text-anchor="middle">browser extension</text>
+<rect x="470" y="190" width="210" height="70" rx="6" fill="#f4f7fa" stroke="#5a6b7b" stroke-width="1.5"></rect>
+<text x="575" y="221" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2d3d" text-anchor="middle">Word processor plugin</text>
+<text x="575" y="239" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#44566b" text-anchor="middle">Word · LibreOffice · Google Docs</text>
+<line x1="130" y1="188" x2="118" y2="146" stroke="#5a6b7b" stroke-width="1.5"></line>
+<line x1="475" y1="195" x2="230" y2="110" stroke="#5a6b7b" stroke-width="1.5" stroke-dasharray="5 4"></line>
+<line x1="95" y1="22" x2="105" y2="58" stroke="#1f2d3d" stroke-width="1.2"></line>
+<circle cx="95" cy="22" r="11" fill="#ffffff" stroke="#1f2d3d" stroke-width="2"></circle>
+<text x="95" y="26.5" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#1f2d3d" text-anchor="middle">1</text>
+<line x1="60" y1="160" x2="95" y2="192" stroke="#1f2d3d" stroke-width="1.2"></line>
+<circle cx="60" cy="160" r="11" fill="#ffffff" stroke="#1f2d3d" stroke-width="2"></circle>
+<text x="60" y="164.5" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#1f2d3d" text-anchor="middle">2</text>
+<line x1="600" y1="160" x2="545" y2="190" stroke="#1f2d3d" stroke-width="1.2"></line>
+<circle cx="600" cy="160" r="11" fill="#ffffff" stroke="#1f2d3d" stroke-width="2"></circle>
+<text x="600" y="164.5" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#1f2d3d" text-anchor="middle">3</text>
+<text x="40" y="285" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#44566b" text-anchor="start" font-style="italic">Pieces 2 and 3 talk to piece 1 - if the app is closed, saving and citing fail.</text>
+</svg>

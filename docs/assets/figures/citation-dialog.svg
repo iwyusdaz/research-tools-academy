@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 280" width="720" height="280" role="img" aria-labelledby="f-citation-dialog-t f-citation-dialog-d">
+<title id="f-citation-dialog-t">Schematic: the citation dialog inside a document</title>
+<desc id="f-citation-dialog-d">A floating dialog over a document page. You type part of a title or author, matching items appear, and selecting one shows it as a shaded bubble. Pressing Enter inserts the citation at the cursor.</desc>
+<rect x="0" y="0" width="720" height="280" fill="#ffffff"></rect>
+<rect x="40" y="40" width="640" height="200" rx="6" fill="#f4f7fa" stroke="#5a6b7b" stroke-width="1.5"></rect>
+<text x="60" y="66" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#44566b" text-anchor="start">Your document…</text>
+<rect x="70" y="84" width="480" height="44" rx="6" fill="#f4f7fa" stroke="#5a6b7b" stroke-width="1.5"></rect>
+<text x="310" y="111" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2d3d" text-anchor="middle">Type title, author, or year…</text>
+<rect x="70" y="150" width="480" height="40" rx="6" fill="#e2ebf3" stroke="#1a4f72" stroke-width="2"></rect>
+<text x="310" y="175" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#1f2d3d" text-anchor="middle">Okafor 2023 — wetland policy — shaded bubble</text>
+<line x1="620" y1="100" x2="552" y2="106" stroke="#1f2d3d" stroke-width="1.2"></line>
+<circle cx="620" cy="100" r="11" fill="#ffffff" stroke="#1f2d3d" stroke-width="2"></circle>
+<text x="620" y="104.5" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#1f2d3d" text-anchor="middle">1</text>
+<line x1="620" y1="168" x2="552" y2="170" stroke="#1f2d3d" stroke-width="1.2"></line>
+<circle cx="620" cy="168" r="11" fill="#ffffff" stroke="#1f2d3d" stroke-width="2"></circle>
+<text x="620" y="172.5" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#1f2d3d" text-anchor="middle">2</text>
+<text x="40" y="264" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#44566b" text-anchor="start" font-style="italic">1. Search box   2. Selected item as a bubble; Enter inserts the citation</text>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" width="720" height="300" role="img" aria-labelledby="f-sync-prefs-t f-sync-prefs-d">
+<title id="f-sync-prefs-t">Schematic: the Sync pane of the Zotero settings</title>
+<desc id="f-sync-prefs-d">The Zotero settings Sync pane. Top section: Data Syncing with a username field and Sync automatically checked. Below: File Syncing with a choice between Zotero storage and a WebDAV server. The Sync button sits on the main toolbar.</desc>
+<rect x="0" y="0" width="720" height="300" fill="#ffffff"></rect>
+<rect x="40" y="40" width="420" height="90" rx="6" fill="#e2ebf3" stroke="#1a4f72" stroke-width="2"></rect>
+<text x="250" y="81" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2d3d" text-anchor="middle">Data Syncing</text>
+<text x="250" y="99" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#44566b" text-anchor="middle">username · password · [x] Sync automatically</text>
+<rect x="40" y="160" width="420" height="90" rx="6" fill="#f4f7fa" stroke="#5a6b7b" stroke-width="1.5"></rect>
+<text x="250" y="201" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2d3d" text-anchor="middle">File Syncing</text>
+<text x="250" y="219" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#44566b" text-anchor="middle">( ) Zotero   ( ) WebDAV: URL, username, Verify Server</text>
+<rect x="540" y="60" width="140" height="60" rx="6" fill="#f4f7fa" stroke="#5a6b7b" stroke-width="1.5"></rect>
+<text x="610" y="86" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2d3d" text-anchor="middle">Sync button</text>
+<text x="610" y="104" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#44566b" text-anchor="middle">main toolbar</text>
+<line x1="520" y1="70" x2="460" y2="85" stroke="#1f2d3d" stroke-width="1.2"></line>
+<circle cx="520" cy="70" r="11" fill="#ffffff" stroke="#1f2d3d" stroke-width="2"></circle>
+<text x="520" y="74.5" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#1f2d3d" text-anchor="middle">1</text>
+<line x1="520" y1="200" x2="460" y2="205" stroke="#1f2d3d" stroke-width="1.2"></line>
+<circle cx="520" cy="200" r="11" fill="#ffffff" stroke="#1f2d3d" stroke-width="2"></circle>
+<text x="520" y="204.5" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#1f2d3d" text-anchor="middle">2</text>
+<line x1="610" y1="160" x2="590" y2="122" stroke="#1f2d3d" stroke-width="1.2"></line>
+<circle cx="610" cy="160" r="11" fill="#ffffff" stroke="#1f2d3d" stroke-width="2"></circle>
+<text x="610" y="164.5" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#1f2d3d" text-anchor="middle">3</text>
+<text x="40" y="280" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#44566b" text-anchor="start" font-style="italic">1. Data sync (free, unlimited)   2. File sync (300 MB free, or WebDAV)   3. Sync now</text>
+</svg>
