@@ -74,6 +74,17 @@ figcaption {
   padding-left: 1.2rem;
 }
 
+// Troubleshoot chooser: one flow button + a one-line hint per item
+.tool-flow-item {
+  margin: 0.6rem 0;
+}
+
+.tool-flow-hint {
+  color: #44566b;
+  font-size: 0.85rem;
+  margin: 0.25rem 0 0;
+}
+
 .tool-section {
   border: 1px solid $border-color;
   border-radius: 4px;

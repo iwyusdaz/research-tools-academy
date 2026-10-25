@@ -4,6 +4,8 @@
  * - One scenario at a time; options are radios in a fieldset (legend = prompt).
  * - "Check answer" evaluates; per-option feedback renders in a role=status
  *   region and the feedback heading receives focus.
+ * - Back stays available after checking so a learner can re-read the previous
+ *   scenario.
  * - Progress and results are text; nothing is stored or transmitted.
  * - Lesson links in feedback make sense out of context.
  */
@@ -124,8 +126,17 @@
     var controls = root.querySelector(".tool-controls");
     root.insertBefore(feedback, controls);
 
-    // Replace check button with next / results
+    // Replace check button with next / results; keep Back so the previous
+    // scenario can be re-read after checking
     controls.innerHTML = "";
+    if (state.index > 0) {
+      var back = el("button", { type: "button", class: "btn btn-secondary", text: "Back" });
+      back.addEventListener("click", function () {
+        state.index -= 1;
+        renderItem();
+      });
+      controls.appendChild(back);
+    }
     var isLast = state.index === DATA.items.length - 1;
     var next = el("button", {
       type: "button",

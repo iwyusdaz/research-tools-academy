@@ -1,10 +1,12 @@
 /* Troubleshooting tool: renders the guided flows from flows.json.
  *
  * Accessibility contract (verified with Playwright keyboard tests):
- * - Each step is a <section> whose <h3> receives focus when the step is shown
- *   (heading has tabindex="-1"); options are <button> elements.
+ * - The chooser heading and each step's <h3> receive focus when shown
+ *   (headings have tabindex="-1"); options are <button> elements.
+ * - The "Flow title — step N" status line is a role=status region so screen
+ *   readers hear it on each render.
  * - Back and Start over are buttons; Back pops the history, Start over resets
- *   to the flow chooser.
+ *   to the flow chooser (whose heading takes focus again).
  * - No pointer-only interactions; no color-only meaning; no time limits.
  */
 (function () {
@@ -42,11 +44,12 @@
     state = { flow: null, history: [] };
     root.innerHTML = "";
 
-    var h = el("h2", { id: "tool-heading", text: "What's going wrong?" });
+    var h = el("h2", { id: "tool-heading", tabindex: "-1", text: "What's going wrong?" });
     var intro = el("p", { text: "Pick the problem closest to yours. Every flow is built from real support questions and the official Zotero documentation." });
     var list = el("div", { class: "tool-flow-chooser", role: "group", "aria-label": "Troubleshooting flows" });
 
     FLOWS.flows.forEach(function (flow, i) {
+      var item = el("div", { class: "tool-flow-item" });
       var btn = el("button", {
         type: "button",
         class: "btn btn-flow",
@@ -55,7 +58,11 @@
       btn.addEventListener("click", function () {
         startFlow(i);
       });
-      list.appendChild(btn);
+      item.appendChild(btn);
+      if (flow.hint) {
+        item.appendChild(el("p", { class: "tool-flow-hint", text: flow.hint }));
+      }
+      list.appendChild(item);
     });
 
     root.appendChild(h);
@@ -82,8 +89,9 @@
 
     root.innerHTML = "";
 
-    // Status line: where am I?
-    var status = el("p", { class: "tool-status", id: "tool-status" });
+    // Status line: where am I? (role=status so screen readers announce it
+    // alongside the newly focused step heading)
+    var status = el("p", { class: "tool-status", id: "tool-status", role: "status" });
     var flowTitle = el("strong", { text: flow.title });
     status.appendChild(flowTitle);
     status.appendChild(document.createTextNode(" — step " + depth));

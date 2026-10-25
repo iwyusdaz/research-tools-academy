@@ -8,8 +8,8 @@
 |---|---|---|---|
 | Support-needs analysis | Real public data (forum + KB), single coder | **Complete** | [`analysis/support-analysis.md`](../analysis/support-analysis.md) |
 | Accessibility audit (automated) | axe-core 4.11.1, WCAG 2.1 A/AA + best practice, per page + both tools | **Complete** | summary below; raw JSON via the audit script |
-| Keyboard task tests | Playwright 1.57 scripted keyboard-only task completion + 320 px reflow | **Complete** (34/34) | `evaluation/keyboard-tests.mjs` |
-| Design review | **Agent review** — structured heuristic + cognitive-walkthrough review by a reviewer agent that did not build the repo | **Complete** | `evaluation/human-protocol/review-form.md` |
+| Keyboard task tests | Playwright 1.57 scripted keyboard-only task completion + 320 px reflow | **Complete** (46/46) | `evaluation/keyboard-tests.mjs` |
+| Design review | **Agent review** — structured heuristic + cognitive-walkthrough review by a reviewer agent that did not build the repo | **Complete** — artifact committed 2026-10-26; findings triaged and fixes applied | [`evaluation/agent-review.md`](agent-review.md) |
 | Simulated learners + item analysis | AI-simulated personas (3 personas × 3 levels, 9 runs) + two-model item review | **PENDING: requires API key** | `evaluation/run-simulations.mjs`; outputs placeholder in `evaluation/output/` |
 | Usability test with real users | 3–5 grad students, scripted tasks, consented | **Not run** — protocol prepared | `evaluation/human-protocol/` |
 | Screen reader review | Manual VoiceOver protocol (automation unavailable — see Limitations) | **Not run** — protocol prepared | `evaluation/human-protocol/voiceover-manual-check.md` |
@@ -33,16 +33,16 @@
 
 `evaluation/keyboard-tests.mjs` serves the built site locally and drives headless Chromium with keyboard only:
 
-- **Troubleshooting tool:** chooser reachable by Tab; Enter starts a flow; **focus moves to each new step heading** (asserted via `document.activeElement`); options activate by keyboard; Back returns to the previous step; Start over resets; a full flow completes to a solved state; no positive `tabindex` anywhere.
-- **Skills check:** all 9 scenarios answered keyboard-only; feedback panel receives focus; results render per path; Start over resets.
+- **Troubleshooting tool:** chooser reachable by Tab; Enter starts a flow; **the chooser heading receives focus on load and after Start over** (asserted via `document.activeElement`); **focus moves to each new step heading** (asserted the same way); the "flow — step N" status line is a live region (`role="status"`); options activate by keyboard; Back returns to the previous step; Start over resets; a full flow completes to a solved state; no positive `tabindex` anywhere.
+- **Skills check:** all 9 scenarios answered keyboard-only; feedback panel receives focus; **Back remains available after checking an answer**; results render per path; Start over resets.
 - **Reflow:** both tools at 320 px width produce no horizontal scroll (WCAG 1.4.10 proxy).
-- Result at build time: **34/34 checks pass**.
+- Result: **46/46 checks pass** (34 checks at the 2026-10-25 build; extended with the focus, live-region and Back assertions added in the 2026-10-26 agent-review revision round).
 
 **Can show:** the task flows are keyboard-operable and focus is managed. **Cannot show:** screen reader output quality or real-user experience.
 
 ## 4. Agent review (complete, with stated limitation)
 
-A structured review of every lesson, both tools and the strategy documents, performed by a reviewer agent **that did not build the repository**, using the review form in `evaluation/human-protocol/review-form.md` (heuristic evaluation + cognitive walkthrough). Findings were triaged: accepted fixes are recorded in `CHANGELOG.md`.
+A structured review of every lesson, both tools and the strategy documents, performed by a reviewer agent **that did not build the repository**, using the review form in `evaluation/human-protocol/review-form.md` (heuristic evaluation + cognitive walkthrough). The full report — 13 findings (4 P2, 9 P3), verified probes and limitations — is at [`evaluation/agent-review.md`](agent-review.md) (2026-10-26). All 13 findings were triaged and accepted; fixes are recorded in `CHANGELOG.md` (1.0.1).
 
 **Limitation, stated plainly:** the reviewer agent may run on the same underlying model family as the authoring agent, so this is *not* an independent expert review. It is labeled "Agent review" everywhere it appears. It cannot substitute for the usability test or an expert (Zotero-experienced) review, both of which remain open to the owner.
 

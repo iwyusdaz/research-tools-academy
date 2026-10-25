@@ -72,6 +72,8 @@ try {
     const chooserButtons = page.locator("#troubleshooter button");
     await chooserButtons.first().waitFor();
     check("troubleshoot: flow chooser renders 5 flows", (await chooserButtons.count()) === 5);
+    check("troubleshoot: focus lands on the chooser heading on load", await page.evaluate(() => document.activeElement?.id === "tool-heading"));
+    check("troubleshoot: chooser shows a one-line hint per flow", (await page.locator(".tool-flow-hint").count()) === 5);
 
     // Keyboard: Tab to the first flow button and activate with Enter
     await page.keyboard.press("Tab"); // skip link / search etc. vary; find our heading first
@@ -99,6 +101,7 @@ try {
     const depth2 = await page.evaluate(() => document.querySelector(".tool-status")?.textContent || "");
     check("troubleshoot: step 2 renders with status line", depth2.includes("step 2"), depth2.trim());
     check("troubleshoot: focus on the new step heading", await page.evaluate(() => document.activeElement?.id === "step-heading"));
+    check("troubleshoot: status line is announced (role=status)", await page.evaluate(() => document.getElementById("tool-status")?.getAttribute("role") === "status"));
 
     // Back returns to the previous step
     await page.getByRole("button", { name: "Back" }).focus();
@@ -106,10 +109,13 @@ try {
     const depth1 = await page.evaluate(() => document.querySelector(".tool-status")?.textContent || "");
     check("troubleshoot: Back returns to step 1", depth1.includes("step 1"), depth1.trim());
 
-    // Walk a full flow to a terminal "solved" state (flow 1 -> Chrome -> yes)
+    // Start over resets to the chooser and moves focus to its heading
     await page.getByRole("button", { name: "Start over" }).focus();
     await page.keyboard.press("Enter");
     await page.locator("#troubleshooter button").first().waitFor();
+    check("troubleshoot: focus returns to the chooser heading after Start over", await page.evaluate(() => document.activeElement?.id === "tool-heading"));
+
+    // Walk a full flow to a terminal "solved" state (flow 1 -> Chrome -> yes)
     await page.locator("#troubleshooter button").first().focus();
     await page.keyboard.press("Enter"); // flow 1
     await page.locator("#step-heading").waitFor();
@@ -143,6 +149,9 @@ try {
       await page.keyboard.press("Enter");
       await page.locator('[role="status"] h4').waitFor();
       check(`skills-check item ${i}: feedback shown with focus on it`, await page.evaluate(() => document.activeElement?.id === "feedback-heading"));
+      if (i >= 2) {
+        check(`skills-check item ${i}: Back still available after checking`, (await page.getByRole("button", { name: "Back" }).count()) === 1);
+      }
       if (i < 9) {
         await page.getByRole("button", { name: "Next scenario" }).focus();
         await page.keyboard.press("Enter");

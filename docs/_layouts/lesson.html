@@ -2,11 +2,22 @@
 layout: default
 ---
 {% include disclaimer.html %}
+{%- assign milestone_verb = "moves" -%}
+{%- assign milestone_noun = "milestone" -%}
+{%- assign milestone_suffix = "" -%}
+{%- if page.milestone_kind == "setup" -%}
+{%- assign milestone_verb = "supports" -%}
+{%- assign milestone_suffix = " (setup)" -%}
+{%- elsif page.milestone_kind == "retain" -%}
+{%- assign milestone_verb = "supports" -%}
+{%- assign milestone_noun = "milestones" -%}
+{%- assign milestone_suffix = " (retain)" -%}
+{%- endif -%}
 <div class="lesson-meta">
   {%- if page.minutes -%}<span class="lesson-minutes">About {{ page.minutes }} minutes</span>{%- endif -%}
   {%- if page.milestone -%}
-  <span class="milestone-badge" title="This lesson moves adoption milestone {{ page.milestone }}">{{ page.milestone }}</span>
-  <span class="lesson-milestone-label">moves milestone {{ page.milestone }}</span>
+  <span class="milestone-badge" title="This lesson {{ milestone_verb }} {{ milestone_noun }} {{ page.milestone }}">{{ page.milestone }}</span>
+  <span class="lesson-milestone-label">{{ milestone_verb }} {{ milestone_noun }} {{ page.milestone }}{{ milestone_suffix }}</span>
   {%- endif -%}
 </div>
 {{ content }}

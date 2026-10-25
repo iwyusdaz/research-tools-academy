@@ -1,6 +1,6 @@
 # Status
 
-*Last updated: 2026-10-25 (build date).*
+*Last updated: 2026-10-26 (revision round from the agent review).*
 
 ## Live
 
@@ -18,13 +18,13 @@
 - [x] Skills check: 9 scenario items, per-option feedback → lessons, results by path, nothing stored
 - [x] Job aids: 2 cards (HTML + one-page PDF each)
 - [x] Strategy: metrics plan, simulated dashboard (labeled), maintenance plan, launch plan, + issue template
-- [x] Evaluation: METHODS.md; axe audits; 34/34 keyboard tests; Agent review form; human protocol (5 files); pending pipeline (`run-simulations.mjs`, `.env.example` per spec, dry-run verified, no-key exit verified); output placeholder marked PENDING
+- [x] Evaluation: METHODS.md; axe audits; keyboard tests (46/46 after the review-revision extensions); Agent review **complete** — artifact committed at `evaluation/agent-review.md` (2026-10-26); human protocol (5 files); pending pipeline (`run-simulations.mjs`, `.env.example` per spec, dry-run verified, no-key exit verified); output placeholder marked PENDING
 - [x] Repo docs: README case study (with exact evaluation-status notice), LICENSE (CC BY 4.0), LICENSE-CODE (MIT), ATTRIBUTION.md, CHANGELOG.md, DECISIONS.md, STATUS.md, DISCLAIMER include on every page
 - [x] Published: repo pushed, Pages enabled and built; live verification 2026-10-25:
   - linkcheck across the live site: 31 pages, **0 broken links**
   - axe audit of all 27 live Jekyll/standalone pages: **0 violations** (critical/serious/moderate/minor)
   - live smoke tests of both interactive tools: render, focus management, no JS errors
-  - keyboard tests: 34/34 (local, served `docs/`)
+  - keyboard tests: 46/46 (local, served `docs/`; extended 2026-10-26 for chooser focus, live-region status and Back-after-check assertions)
   - gitleaks: working tree + full git history clean; no `.env` ever committed; no files > 50 MB
   - pipeline: `npm run eval:pending` exits 1 with "PENDING: requires API key" and zero network; `npm run eval:dry-run` writes labeled dry-run output only
 - [ ] Owner: upload `docs/assets/social-preview.png` (1280×640) in repo Settings → General → Social preview (no API for that step)
@@ -42,6 +42,18 @@
 - No screen reader testing performed (Guidepup broken on macOS 27; manual protocol provided)
 - No real-user evaluation yet; simulated results must never be presented as user evidence
 - Forum data is a biased sample (stated in the analysis)
+
+## Revision round (2026-10-26) — from the agent review
+
+The fresh-context **Agent review** (`evaluation/agent-review.md`, committed this round) reported 4 P2 and 9 P3 findings. All 13 were accepted and fixed; triage log in [CHANGELOG.md](CHANGELOG.md) (1.0.1), decisions in [DECISIONS.md](DECISIONS.md) (D11–D12). Re-run after the fixes:
+
+- keyboard tests: **46/46** (extended with chooser-focus-on-load/after-Start-over, `role="status"` and Back-after-check assertions)
+- axe audit: re-run on the changed pages (both tools locally, home + lesson 5 live after the Pages build) — **0 violations**
+- linkcheck: local (served `docs/`) + live — **0 broken links**
+- gitleaks: working tree + history clean
+- Live verification after the Pages build: README headline numbers, chooser focus behavior, plugin step 5 platform split, milestones table live
+
+**Deferred:** flow 3's macOS permission step stays bundled (DECISIONS.md D12).
 
 ## Build log (2026-10-25)
 

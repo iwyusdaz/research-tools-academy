@@ -3,6 +3,7 @@
     {
       "id": "connector-no-button",
       "title": "The Zotero save button doesn't appear in my browser",
+      "hint": "For Chrome/Edge, Firefox or Safari. Usually fixed by pinning or reinstalling the connector — a few short steps.",
       "based_on": "C1 in the support analysis (20 questions); official KB topic no_toolbar_button",
       "official": "https://www.zotero.org/support/kb/no_toolbar_button",
       "start": "q-browser",
@@ -79,6 +80,7 @@
     {
       "id": "connector-unavailable",
       "title": "Saving fails: \"Zotero is unavailable\" — or items/PDFs never appear",
+      "hint": "Three distinct failure modes with different fixes: app closed, item saved out of sight, or PDF missing.",
       "based_on": "C1; rows #86, #91, #135 in the support analysis",
       "official": "https://www.zotero.org/support/kb/connector_zotero_unavailable",
       "start": "q-symptom",
@@ -138,6 +140,7 @@
     {
       "id": "word-tab-missing",
       "title": "The Zotero tab is missing in Microsoft Word",
+      "hint": "Separate macOS and Windows paths: reinstall, templates/add-ins, then permissions or the Trust Center.",
       "based_on": "C2 (15 questions); rows #46, #138 in the support analysis",
       "official": "https://www.zotero.org/support/word_processor_plugin_troubleshooting",
       "start": "q-platform",
@@ -187,6 +190,7 @@
     {
       "id": "citations-field-codes",
       "title": "Citations show as ADDIN ZOTERO_ITEM codes — or won't update",
+      "hint": "Two symptoms that look broken but usually aren't — the common one takes five seconds to fix.",
       "based_on": "C2/C3 (28 questions combined); rows #58, #139, #140 in the support analysis",
       "official": "https://www.zotero.org/support/kb/word_field_codes",
       "start": "q-cite-symptom",
@@ -244,6 +248,7 @@
     {
       "id": "sync-failing",
       "title": "PDFs or changes won't sync across devices",
+      "hint": "Four sync symptoms: error messages, files missing on device 2, quota warnings, or repeated conflicts.",
       "based_on": "C5 (16 questions); rows #99, #132, #133, #142, #143 in the support analysis",
       "official": "https://www.zotero.org/support/kb/files_not_syncing",
       "start": "q-sync-symptom",
@@ -262,7 +267,7 @@
         "fix-sync-error": {
           "type": "fix",
           "heading": "Read the error — it names the problem",
-          "body": "<ol><li>Click the <strong>sync error icon</strong> (next to the Sync button on desktop, or at the bottom of the items list on mobile). The message is specific.</li><li><strong>Username/password errors:</strong> re-enter credentials in Settings → Sync → Data Syncing.</li><li><strong>“Too many authentication failures” / HTTP 429:</strong> you're rate-limited, usually after many rapid retries — wait a few minutes and sync once (row #99 in the support data).</li><li>Anything else: the error text usually links to a page with the fix — follow it before posting.</li></ol>",
+          "body": "<ol><li>Click the <strong>sync error icon</strong> (next to the Sync button on desktop, or at the bottom of the items list on mobile). The message is specific.</li><li><strong>Username/password errors:</strong> re-enter credentials in Settings → Sync → Data Syncing.</li><li><strong>“Too many authentication failures” / HTTP 429:</strong> you're rate-limited, usually after many rapid retries — wait a few minutes and sync once. If the error mentions API keys, sign out of Zotero syncing and sign back in: in row #99's thread a deleted/stale key kept re-authenticating until the sign-out/in.</li><li>Anything else: the error text usually links to a page with the fix — follow it before posting.</li></ol>",
           "options": [
             { "label": "Yes, solved", "next": "done-sync" },
             { "label": "No, error persists", "next": "exit-sync-forum" }
