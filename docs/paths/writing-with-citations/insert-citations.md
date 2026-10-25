@@ -11,6 +11,8 @@ next_text: Generate and update your bibliography
 official_path: https://www.zotero.org/support/word_processor_plugin_usage
 official_label: "Official docs: Word processor plugin usage"
 ---
+# Insert citations and choose a style
+
 
 ## What you'll do
 

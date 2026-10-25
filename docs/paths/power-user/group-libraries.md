@@ -11,6 +11,8 @@ next_text: Troubleshooting tool
 official_path: https://www.zotero.org/support/groups
 official_label: "Official docs: Groups"
 ---
+# Group libraries for research teams
+
 
 ## What you'll do
 

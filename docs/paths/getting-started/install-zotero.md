@@ -11,6 +11,8 @@ next_text: Save your first sources from the web
 official_path: https://www.zotero.org/support/installation
 official_label: "Official docs: Installation"
 ---
+# Install Zotero and the browser connector
+
 
 ## What you'll do
 

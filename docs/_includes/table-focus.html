@@ -8,12 +8,27 @@
 <script>
 (function () {
   function fix() {
-    document.querySelectorAll(".table-wrapper").forEach(function (el) {
+    var used = {};
+    var wrappers = Array.prototype.slice.call(document.querySelectorAll(".table-wrapper"));
+    wrappers.forEach(function (el, idx) {
       if (el.hasAttribute("tabindex")) return;
       el.setAttribute("tabindex", "0");
       el.setAttribute("role", "region");
       var caption = el.querySelector("table caption");
-      el.setAttribute("aria-label", caption ? caption.textContent.trim() : "Scrollable data table");
+      var label = caption ? caption.textContent.trim() : null;
+      if (!label) {
+        // Derive from the nearest preceding heading; fall back to a numbered label.
+        var prev = el.previousElementSibling;
+        while (prev && !/^H[1-6]$/.test(prev.tagName)) prev = prev.previousElementSibling;
+        label = prev ? prev.textContent.trim() + " — data table" : "Data table " + (idx + 1);
+      }
+      if (used[label]) {
+        used[label] += 1;
+        label = label + " (" + used[label] + ")";
+      } else {
+        used[label] = 1;
+      }
+      el.setAttribute("aria-label", label);
     });
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", fix);

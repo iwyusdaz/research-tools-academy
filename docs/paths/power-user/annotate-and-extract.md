@@ -11,6 +11,8 @@ next_text: Group libraries for research teams
 official_path: https://www.zotero.org/support/pdf_reader
 official_label: "Official docs: PDF reader"
 ---
+# Annotate PDFs and extract notes
+
 
 ## What you'll do
 

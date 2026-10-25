@@ -11,6 +11,8 @@ next_text: Power user path
 official_path: https://www.zotero.org/support/kb/citations_not_updating
 official_label: "Official docs: KB — Citations not updating"
 ---
+# Fix common citation formatting errors
+
 
 ## What you'll do
 

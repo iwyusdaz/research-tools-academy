@@ -11,6 +11,8 @@ next_text: Organize with collections and tags
 official_path: https://www.zotero.org/support/adding_items_to_zotero
 official_label: "Official docs: Adding items to Zotero"
 ---
+# Add PDFs and retrieve metadata
+
 
 ## What you'll do
 

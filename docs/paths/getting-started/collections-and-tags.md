@@ -11,6 +11,8 @@ next_text: Writing with citations path
 official_path: https://www.zotero.org/support/collections_and_tags
 official_label: "Official docs: Collections and tags"
 ---
+# Organize with collections and tags
+
 
 ## What you'll do
 

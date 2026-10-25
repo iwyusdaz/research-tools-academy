@@ -11,6 +11,8 @@ next_text: Insert citations and choose a style
 official_path: https://www.zotero.org/support/word_processor_plugin_installation
 official_label: "Official docs: Word processor plugin installation"
 ---
+# Install the word processor plugin
+
 
 ## What you'll do
 

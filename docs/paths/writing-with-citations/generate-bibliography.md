@@ -11,6 +11,8 @@ next_text: Fix common citation formatting errors
 official_path: https://www.zotero.org/support/creating_bibliographies
 official_label: "Official docs: Creating bibliographies"
 ---
+# Generate and update your bibliography
+
 
 ## What you'll do
 

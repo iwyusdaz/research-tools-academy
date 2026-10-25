@@ -11,6 +11,8 @@ next_text: Annotate PDFs and extract notes
 official_path: https://www.zotero.org/support/sync
 official_label: "Official docs: Syncing"
 ---
+# Sync your library across devices
+
 
 ## What you'll do
 
