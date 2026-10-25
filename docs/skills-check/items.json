@@ -1,0 +1,270 @@
+{
+  "paths": {
+    "getting-started": {
+      "title": "Getting started",
+      "overview": "paths/getting-started.html"
+    },
+    "writing-with-citations": {
+      "title": "Writing with citations",
+      "overview": "paths/writing-with-citations.html"
+    },
+    "power-user": {
+      "title": "Power user",
+      "overview": "paths/power-user.html"
+    }
+  },
+  "items": [
+    {
+      "id": "g1",
+      "path": "getting-started",
+      "scenario": "You're on a journal article's page and click the Zotero save button. A message says “Zotero is unavailable”. What is the most likely cause?",
+      "options": [
+        {
+          "text": "The Zotero desktop app isn't running — the browser extension talks to the app on your computer",
+          "correct": true,
+          "feedback": "Exactly. The connector sends what you save to the desktop app over a local connection; if the app is closed, saving fails. Open Zotero and save again.",
+          "lesson": "paths/getting-started/install-zotero.html",
+          "lesson_label": "Lesson 1: Install Zotero and the browser connector"
+        },
+        {
+          "text": "Your internet connection is down",
+          "correct": false,
+          "feedback": "Not the usual cause. Saving is local-first: the connector hands the item to the desktop app, which does the network part later. “Zotero is unavailable” almost always means the desktop app isn't running or something on your computer blocks the local connection.",
+          "lesson": "paths/getting-started/install-zotero.html",
+          "lesson_label": "Lesson 1: Install Zotero and the browser connector"
+        },
+        {
+          "text": "The article is behind a paywall",
+          "correct": false,
+          "feedback": "Paywalls affect whether you can download the PDF — not whether Zotero is reachable. The “unavailable” message is about the desktop app, not the publisher.",
+          "lesson": "paths/getting-started/install-zotero.html",
+          "lesson_label": "Lesson 1: Install Zotero and the browser connector"
+        }
+      ]
+    },
+    {
+      "id": "g2",
+      "path": "getting-started",
+      "scenario": "You dragged a PDF from your desktop into Zotero. The items list shows only the filename, draft.pdf. What makes it citable?",
+      "options": [
+        {
+          "text": "Right-click the PDF → Create Parent Item, then enter the DOI or ISBN so metadata fills in",
+          "correct": true,
+          "feedback": "Right — the PDF needs a parent item with metadata. The identifier lookup fills in title, authors and year automatically.",
+          "lesson": "paths/getting-started/add-pdfs.html",
+          "lesson_label": "Lesson 3: Add PDFs and retrieve metadata"
+        },
+        {
+          "text": "Rename the file to the article title",
+          "correct": false,
+          "feedback": "Renaming changes the filename, not the item's metadata — citations still come from the metadata fields, which don't exist yet for a standalone file.",
+          "lesson": "paths/getting-started/add-pdfs.html",
+          "lesson_label": "Lesson 3: Add PDFs and retrieve metadata"
+        },
+        {
+          "text": "Delete it and re-save it from the journal's website with the connector",
+          "correct": false,
+          "feedback": "That can work, but it's slower and fails for PDFs you can't re-download. Create Parent Item + identifier is faster and always available.",
+          "lesson": "paths/getting-started/add-pdfs.html",
+          "lesson_label": "Lesson 3: Add PDFs and retrieve metadata"
+        }
+      ]
+    },
+    {
+      "id": "g3",
+      "path": "getting-started",
+      "scenario": "After saving from two databases, the same paper is in your library twice with slightly different titles. What's the best move?",
+      "options": [
+        {
+          "text": "Merge them from the Duplicate Items view — merging keeps both items' collections and tags",
+          "correct": true,
+          "feedback": "Correct. Merging preserves the collections, tags and attachments of both versions, and your word processor citations update automatically.",
+          "lesson": "paths/getting-started/collections-and-tags.html",
+          "lesson_label": "Lesson 4: Organize with collections and tags"
+        },
+        {
+          "text": "Delete one of the two items",
+          "correct": false,
+          "feedback": "Deleting loses whatever was attached only to that copy — collections, tags, annotations. Merging keeps everything; deleting is the one action the official docs warn against.",
+          "lesson": "paths/getting-started/collections-and-tags.html",
+          "lesson_label": "Lesson 4: Organize with collections and tags"
+        },
+        {
+          "text": "Leave them — duplicates don't affect citations",
+          "correct": false,
+          "feedback": "They do eventually: you'll cite one copy in one place and the other copy elsewhere, and the bibliography will list the paper twice.",
+          "lesson": "paths/getting-started/collections-and-tags.html",
+          "lesson_label": "Lesson 4: Organize with collections and tags"
+        }
+      ]
+    },
+    {
+      "id": "w1",
+      "path": "writing-with-citations",
+      "scenario": "After a Word update, the Zotero tab has vanished from the ribbon. Where is the first place to reinstall the plugin?",
+      "options": [
+        {
+          "text": "Zotero: Settings → Cite → Word Processors → Install Microsoft Word Add-in",
+          "correct": true,
+          "feedback": "Right. The plugin ships with Zotero and is (re)installed from Zotero's own settings, then Word is restarted.",
+          "lesson": "paths/writing-with-citations/install-word-plugin.html",
+          "lesson_label": "Lesson 5: Install the word processor plugin"
+        },
+        {
+          "text": "Word's add-in store (Get Add-ins)",
+          "correct": false,
+          "feedback": "Zotero's plugin isn't distributed through Word's store — it comes bundled with Zotero and installs from Zotero's settings.",
+          "lesson": "paths/writing-with-citations/install-word-plugin.html",
+          "lesson_label": "Lesson 5: Install the word processor plugin"
+        },
+        {
+          "text": "Uninstall and reinstall all of Zotero",
+          "correct": false,
+          "feedback": "Overkill — your data survives a reinstall, but it's unnecessary. The add-in is a separate component you can reinstall in one click from Zotero's Cite settings.",
+          "lesson": "paths/writing-with-citations/install-word-plugin.html",
+          "lesson_label": "Lesson 5: Install the word processor plugin"
+        }
+      ]
+    },
+    {
+      "id": "w2",
+      "path": "writing-with-citations",
+      "scenario": "Your document shows { ADDIN ZOTERO_ITEM CSL_CITATION … } where a citation should be. What happened?",
+      "options": [
+        {
+          "text": "Word is displaying field codes instead of their values — the citation data is fine",
+          "correct": true,
+          "feedback": "Exactly. Zotero stores citations as Word fields; Alt+F9 (Windows) or Option-Fn-F9 (Mac) flips the display back. Nothing was corrupted.",
+          "lesson": "paths/writing-with-citations/fix-formatting-errors.html",
+          "lesson_label": "Lesson 8: Fix common citation formatting errors"
+        },
+        {
+          "text": "The citation data is corrupted and must be re-inserted",
+          "correct": false,
+          "feedback": "The data is intact — you're seeing the field code behind it. Toggling field codes off is instant; re-inserting works too but is unnecessary.",
+          "lesson": "paths/writing-with-citations/fix-formatting-errors.html",
+          "lesson_label": "Lesson 8: Fix common citation formatting errors"
+        },
+        {
+          "text": "The citation style was removed from Zotero",
+          "correct": false,
+          "feedback": "A missing style affects formatting, not the field-code display. The `{ ADDIN … }` view is Word showing the machinery behind every Zotero citation.",
+          "lesson": "paths/writing-with-citations/fix-formatting-errors.html",
+          "lesson_label": "Lesson 8: Fix common citation formatting errors"
+        }
+      ]
+    },
+    {
+      "id": "w3",
+      "path": "writing-with-citations",
+      "scenario": "You need a direct quote and the style requires a page number, like (Okafor, 2023, p. 12). How do you add the page?",
+      "options": [
+        {
+          "text": "In the citation dialog, type p. 12 before pressing Enter — Zotero formats the locator for your style",
+          "correct": true,
+          "feedback": "Correct — and it stays correct when the style changes, because the page is stored as data on the citation, not typed into the text.",
+          "lesson": "paths/writing-with-citations/insert-citations.html",
+          "lesson_label": "Lesson 6: Insert citations and choose a style"
+        },
+        {
+          "text": "Type “, p. 12” into the document right after the inserted citation",
+          "correct": false,
+          "feedback": "Hand-typed text isn't a locator — it won't reformat when the style changes and it sits outside the citation bubble. Use the dialog instead.",
+          "lesson": "paths/writing-with-citations/insert-citations.html",
+          "lesson_label": "Lesson 6: Insert citations and choose a style"
+        },
+        {
+          "text": "Add the page to the item's metadata in Zotero and refresh",
+          "correct": false,
+          "feedback": "Item metadata describes the source (its total pages), not this quotation's location. Locators belong to the citation itself, entered in the dialog.",
+          "lesson": "paths/writing-with-citations/insert-citations.html",
+          "lesson_label": "Lesson 6: Insert citations and choose a style"
+        }
+      ]
+    },
+    {
+      "id": "p1",
+      "path": "power-user",
+      "scenario": "Your notes and item data appear on your laptop, but a PDF you added on the desktop isn't there. Why?",
+      "options": [
+        {
+          "text": "Data and file syncing are separate — the file may never have uploaded, or the storage quota is full, or it's a linked file",
+          "correct": true,
+          "feedback": "Right — the three usual suspects. Check zotero.org for the file, then quota, then whether the attachment shows a chain (linked files don't sync).",
+          "lesson": "paths/power-user/sync-across-devices.html",
+          "lesson_label": "Lesson 9: Sync your library across devices"
+        },
+        {
+          "text": "The laptop needs a paid storage plan to receive files",
+          "correct": false,
+          "feedback": "Receiving is free; the quota applies to storage on the Zotero side. If the file isn't on zotero.org, the receiving device was never the problem.",
+          "lesson": "paths/power-user/sync-across-devices.html",
+          "lesson_label": "Lesson 9: Sync your library across devices"
+        },
+        {
+          "text": "PDFs only sync while Zotero is open on both devices at once",
+          "correct": false,
+          "feedback": "Zotero syncs through the zotero.org servers — devices don't talk to each other directly, so they don't need to be online at the same time.",
+          "lesson": "paths/power-user/sync-across-devices.html",
+          "lesson_label": "Lesson 9: Sync your library across devices"
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "path": "power-user",
+      "scenario": "Your supervisor wants the final thesis PDF today. Your program's style needs one tweak Zotero won't do. What's the safe final step?",
+      "options": [
+        {
+          "text": "Save a backup copy, then Unlink Citations and edit the text as plain text",
+          "correct": true,
+          "feedback": "Correct — Unlink Citations is irreversible, which is exactly why it's a final-copy move on a backed-up file. From then on the text no longer updates, which is fine for a frozen submission.",
+          "lesson": "paths/writing-with-citations/generate-bibliography.html",
+          "lesson_label": "Lesson 7: Generate and update your bibliography"
+        },
+        {
+          "text": "Edit the bibliography text directly — Zotero will keep the other entries updated",
+          "correct": false,
+          "feedback": "A direct edit breaks automatic updating for that entry and is the classic self-inflicted wound in the support data. Unlink-on-a-backup is the documented route.",
+          "lesson": "paths/writing-with-citations/fix-formatting-errors.html",
+          "lesson_label": "Lesson 8: Fix common citation formatting errors"
+        },
+        {
+          "text": "Delete the field codes with Alt+F9",
+          "correct": false,
+          "feedback": "Alt+F9 only toggles the *display* of field codes; it doesn't remove them or change formatting — and deleting fields entirely would strip the citation data.",
+          "lesson": "paths/writing-with-citations/fix-formatting-errors.html",
+          "lesson_label": "Lesson 8: Fix common citation formatting errors"
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "path": "power-user",
+      "scenario": "Your lab of five wants a shared library where everyone adds and edits, PDFs included. Which setup fits?",
+      "options": [
+        {
+          "text": "A Private group with file sharing enabled by an admin",
+          "correct": true,
+          "feedback": "Right — private groups can share files, and membership is invite-only, which matches a lab. (Storage use counts against the group owner's plan.)",
+          "lesson": "paths/power-user/group-libraries.html",
+          "lesson_label": "Lesson 11: Group libraries for research teams"
+        },
+        {
+          "text": "A Public, Open Membership group — anyone can join and files sync to all",
+          "correct": false,
+          "feedback": "Open public groups are the one type that cannot share files — a documented limitation. For a lab with PDFs you need a private (or public closed) group with file sharing on.",
+          "lesson": "paths/power-user/group-libraries.html",
+          "lesson_label": "Lesson 11: Group libraries for research teams"
+        },
+        {
+          "text": "Each member shares their My Library folder via Dropbox",
+          "correct": false,
+          "feedback": "Never put the Zotero data folder in a cloud-sync folder — the official docs call it extremely likely to corrupt the database. Groups exist for exactly this job.",
+          "lesson": "paths/power-user/sync-across-devices.html",
+          "lesson_label": "Lesson 9: Sync your library across devices"
+        }
+      ]
+    }
+  ]
+}

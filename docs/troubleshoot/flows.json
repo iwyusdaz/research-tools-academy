@@ -1,0 +1,314 @@
+{
+  "flows": [
+    {
+      "id": "connector-no-button",
+      "title": "The Zotero save button doesn't appear in my browser",
+      "based_on": "C1 in the support analysis (20 questions); official KB topic no_toolbar_button",
+      "official": "https://www.zotero.org/support/kb/no_toolbar_button",
+      "start": "q-browser",
+      "steps": {
+        "q-browser": {
+          "type": "question",
+          "heading": "Which browser are you using?",
+          "body": "<p>The fix depends on how your browser manages toolbar extensions.</p>",
+          "options": [
+            { "label": "Chrome or Edge", "next": "fix-chromium" },
+            { "label": "Firefox", "next": "fix-firefox" },
+            { "label": "Safari", "next": "fix-safari" }
+          ]
+        },
+        "fix-chromium": {
+          "type": "fix",
+          "heading": "Pin the Zotero extension in Chrome or Edge",
+          "body": "<ol><li>Click the <strong>puzzle-piece icon</strong> (Chrome) or the <strong>extensions icon</strong> (Edge) in the toolbar.</li><li>Find <strong>Zotero Connector</strong> and click the <strong>pin</strong> so it always shows. In Edge, choose <strong>Show in Toolbar</strong>.</li><li>If Zotero is not in the list at all, install it from the <a href=\"https://www.zotero.org/download/\">Zotero download page</a> and confirm the browser's install prompt.</li></ol>",
+          "options": [
+            { "label": "Yes, solved", "next": "done-solved" },
+            { "label": "No, still no button", "next": "fix-chromium-reinstall" }
+          ]
+        },
+        "fix-chromium-reinstall": {
+          "type": "fix",
+          "heading": "Reinstall the connector, then reset the browser if needed",
+          "body": "<ol><li>In the browser's extensions page, <strong>remove</strong> Zotero Connector.</li><li>Install it again from the <a href=\"https://www.zotero.org/download/\">Zotero download page</a>.</li><li>If it is enabled but still invisible, the official docs suggest <strong>resetting Chrome/Edge settings</strong> (Settings → Reset) — extensions come back, this clears configuration that can hide them.</li></ol>",
+          "options": [
+            { "label": "Yes, solved", "next": "done-solved" },
+            { "label": "No, still no button", "next": "exit-forum" }
+          ]
+        },
+        "fix-firefox": {
+          "type": "fix",
+          "heading": "Find and pin the button in Firefox",
+          "body": "<ol><li>Open the <strong>extensions panel</strong> (puzzle-piece icon). If Zotero is there, pin it via the gear icon.</li><li>Otherwise check the <strong>overflow menu (»)</strong> — Firefox often stows it there; resizing the address bar can reveal it.</li><li>If it is in neither place, reinstall from the <a href=\"https://www.zotero.org/download/\">download page</a>. As a last resort the official docs suggest testing in a <strong>new Firefox profile</strong> — a broken profile is a known cause.</li></ol>",
+          "options": [
+            { "label": "Yes, solved", "next": "done-solved" },
+            { "label": "No, still no button", "next": "exit-forum" }
+          ]
+        },
+        "fix-safari": {
+          "type": "fix",
+          "heading": "Enable the Zotero Connector in Safari's extension settings",
+          "body": "<ol><li>Open <strong>Safari → Settings → Extensions</strong>.</li><li>Select <strong>Zotero Connector</strong> and tick <strong>Enable Zotero Connector</strong>.</li><li>Also grant it permission <strong>For other websites</strong> if you save from many sites.</li><li>If Zotero is not listed, install the Safari connector from the <a href=\"https://www.zotero.org/download/\">download page</a> (it ships with the macOS app and needs enabling once).</li></ol>",
+          "options": [
+            { "label": "Yes, solved", "next": "done-solved" },
+            { "label": "No, still no button", "next": "exit-safari" }
+          ]
+        },
+        "exit-safari": {
+          "type": "exit",
+          "heading": "Safari needs the official compatibility guide",
+          "body": "<p>Safari's extension handling changes between macOS versions and is a recurring topic in the support data (row #73: connector registered but missing from Safari's extension list). Zotero keeps a dedicated page for exactly this:</p>",
+          "link_label": "Official guide: Zotero Connector and Safari",
+          "link": "https://www.zotero.org/support/kb/zotero_connector_and_safari",
+          "forum": "https://forums.zotero.org/"
+        },
+        "exit-forum": {
+          "type": "exit",
+          "heading": "This one goes to the official forum",
+          "body": "<p>A still-invisible button after a clean reinstall is usually browser-specific configuration the community has seen before. Search the forum for your browser plus \"save button\", and include your browser version if you post.</p>",
+          "link_label": "Official KB: no toolbar button",
+          "link": "https://www.zotero.org/support/kb/no_toolbar_button",
+          "forum": "https://forums.zotero.org/"
+        },
+        "done-solved": {
+          "type": "done",
+          "heading": "The save button is back",
+          "body": "<p>Next: capture your first sources with it — <a href=\"../paths/getting-started/save-first-sources.html\">lesson 2: Save your first sources from the web</a>.</p>"
+        }
+      }
+    },
+    {
+      "id": "connector-unavailable",
+      "title": "Saving fails: \"Zotero is unavailable\" — or items/PDFs never appear",
+      "based_on": "C1; rows #86, #91, #135 in the support analysis",
+      "official": "https://www.zotero.org/support/kb/connector_zotero_unavailable",
+      "start": "q-symptom",
+      "steps": {
+        "q-symptom": {
+          "type": "question",
+          "heading": "What exactly happens when you save?",
+          "body": "<p>These are three different problems with three different fixes.</p>",
+          "options": [
+            { "label": "A message says Zotero is unavailable (or nothing happens)", "next": "fix-unavailable" },
+            { "label": "It says it saved, but no item appears in Zotero", "next": "fix-not-appearing" },
+            { "label": "The item appears, but the PDF is missing", "next": "fix-pdf-missing" }
+          ]
+        },
+        "fix-unavailable": {
+          "type": "fix",
+          "heading": "The connector can't reach the Zotero app — check the desktop app first",
+          "body": "<ol><li><strong>Is the Zotero desktop app open?</strong> The browser extension talks to the app on your computer (local port 23119). If the app is closed, open it and save again.</li><li>Restart your <strong>browser</strong> and retry.</li><li>Still failing? Open <code>http://127.0.0.1:23119/connector/ping</code> in the browser — it should say <em>“Zotero is running”</em>. If it does but saving still fails, an <strong>extension blocker</strong> (AdBlock, NoScript, Privacy Badger…) is the usual suspect: disable blockers for <code>127.0.0.1</code> and retry.</li><li>If the ping fails in <em>every</em> browser, exclude <code>127.0.0.1</code> from proxy/VPN settings or check security software — details in the official KB.</li></ol>",
+          "options": [
+            { "label": "Yes, solved", "next": "done-save-lesson" },
+            { "label": "No, still failing", "next": "exit-connector-kb" }
+          ]
+        },
+        "fix-not-appearing": {
+          "type": "fix",
+          "heading": "The item saved — but where? Check the right library view",
+          "body": "<ol><li>In Zotero, click <strong>My Library</strong> itself (not a subcollection) and sort by <strong>Date Added</strong>. The item is usually there — saved into the currently selected collection or the root.</li><li>Check whether you were saving into a <strong>group library</strong> by mistake; the save popup names the destination.</li><li>Restart Zotero. In rare cases the connector reports success but the app needs a restart to show the queue — if a restart is needed every time, that's a forum topic (row #86 in the support data).</li></ol>",
+          "options": [
+            { "label": "Yes, solved", "next": "done-save-lesson" },
+            { "label": "No, items still don't appear", "next": "exit-connector-kb" }
+          ]
+        },
+        "fix-pdf-missing": {
+          "type": "fix",
+          "heading": "Get the PDF: save from the article page, or attach it yourself",
+          "body": "<ol><li><strong>Save from the article's landing page</strong> (where the abstract is), not from inside the PDF viewer. Translators on some sites — JSTOR is a known case (row #91 in the support data) — attach PDFs far more reliably from the landing page.</li><li>Already have the PDF on disk? <strong>Drag it onto the item</strong> in Zotero to attach it (lesson 3 covers parent items).</li><li>Some publishers simply don't allow automatic PDF download. The record is still complete — get the PDF from your library's access and drag it in. That's a limitation, not a bug you can fix.</li></ol>",
+          "options": [
+            { "label": "Yes, solved", "next": "done-save-lesson" },
+            { "label": "No, still no PDF", "next": "exit-connector-kb" }
+          ]
+        },
+        "exit-connector-kb": {
+          "type": "exit",
+          "heading": "Take this to the official forum with a Debug ID",
+          "body": "<p>Persistent saving failures are usually translator or site-specific issues the Zotero team debugs from a log. Before posting, capture a Debug ID (Help → Debug Output Logging → <em>Restart with Logging Enabled</em>, reproduce the save, then Submit) — the forum answer time drops dramatically when a Debug ID is attached.</p>",
+          "link_label": "Official KB: connector unavailable",
+          "link": "https://www.zotero.org/support/kb/connector_zotero_unavailable",
+          "forum": "https://forums.zotero.org/"
+        },
+        "done-save-lesson": {
+          "type": "done",
+          "heading": "Saving works again",
+          "body": "<p>Re-check the basics with <a href=\"../paths/getting-started/save-first-sources.html\">lesson 2: Save your first sources from the web</a>.</p>"
+        }
+      }
+    },
+    {
+      "id": "word-tab-missing",
+      "title": "The Zotero tab is missing in Microsoft Word",
+      "based_on": "C2 (15 questions); rows #46, #138 in the support analysis",
+      "official": "https://www.zotero.org/support/word_processor_plugin_troubleshooting",
+      "start": "q-platform",
+      "steps": {
+        "q-platform": {
+          "type": "question",
+          "heading": "Which system is Word on?",
+          "body": "<p>The plugin is bundled with Zotero and normally installs itself. When it doesn't, the fix differs by platform.</p>",
+          "options": [
+            { "label": "macOS", "next": "fix-mac" },
+            { "label": "Windows", "next": "fix-windows" }
+          ]
+        },
+        "fix-mac": {
+          "type": "fix",
+          "heading": "On macOS: reinstall the add-in, check templates, then permissions",
+          "body": "<ol><li>Quit <strong>Word completely</strong>. In Zotero: <strong>Settings → Cite → Word Processors → Install Microsoft Word Add-in</strong>. Reopen Word and look for the tab.</li><li>In Word: <strong>Tools → Templates and Add-ins…</strong> — confirm <strong>Zotero.dotm</strong> is listed and ticked under <em>Global Templates and Add-ins</em>. Missing? Re-run step 1 and check that Word's Startup folder is at its default location.</li><li>Word opens but says <em>“Word could not communicate with Zotero”</em>, or citing fails with an automation error: grant macOS permission — <strong>System Settings → Privacy &amp; Security →</strong> allow Zotero where prompted (Automation / Accessibility). This is the managed-laptop case from the support data (row #138). If your organization's IT policy blocks it, IT needs to whitelist Zotero — education can't override an MDM policy, and this tool won't pretend otherwise.</li><li>Make sure Word itself is the <strong>latest stable version</strong>.</li></ol>",
+          "options": [
+            { "label": "Yes, the tab is there", "next": "done-word" },
+            { "label": "No, still missing", "next": "exit-word" }
+          ]
+        },
+        "fix-windows": {
+          "type": "fix",
+          "heading": "On Windows: reinstall, un-disable the add-in, check the Trust Center",
+          "body": "<ol><li>Quit Word. In Zotero: <strong>Edit → Settings → Cite → Word Processors → Install Microsoft Word Add-in</strong>. Reopen Word.</li><li>In Word: <strong>File → Options → Add-ins</strong>. Find <strong>Zotero.dotm</strong>. If it's under <em>Inactive Application Add-ins</em>: Manage → <em>Word Add-ins</em> → Go… → tick Zotero.dotm. If under <em>Disabled Application Add-ins</em>: Manage → <em>Disabled Items</em> → Go… → Enable.</li><li>Still hidden? <strong>File → Options → Trust Center → Trust Center Settings…</strong> — uncheck <em>“Require Application Add-ins to be signed by Trusted Publisher”</em> and <em>“Disable all Application Add-ins”</em>, then restart Word. (Company policy variants of this need IT — that's an environment restriction, not a fixable bug.)</li><li>Neither Zotero nor Word should run <strong>as administrator</strong> — both must run as the same user.</li></ol>",
+          "options": [
+            { "label": "Yes, the tab is there", "next": "done-word" },
+            { "label": "No, still missing", "next": "exit-word" }
+          ]
+        },
+        "exit-word": {
+          "type": "exit",
+          "heading": "The official troubleshooting page covers the remaining cases",
+          "body": "<p>Institutional IT policies, macro settings, Normal.dotm resets and clean reinstalls are documented step by step on Zotero's plugin troubleshooting page. If nothing there fits, post on the forum with your Word version and platform.</p>",
+          "link_label": "Official docs: word processor plugin troubleshooting",
+          "link": "https://www.zotero.org/support/word_processor_plugin_troubleshooting",
+          "forum": "https://forums.zotero.org/"
+        },
+        "done-word": {
+          "type": "done",
+          "heading": "The Zotero tab is in the ribbon",
+          "body": "<p>Now insert your first citation: <a href=\"../paths/writing-with-citations/insert-citations.html\">lesson 6: Insert citations and choose a style</a>.</p>"
+        }
+      }
+    },
+    {
+      "id": "citations-field-codes",
+      "title": "Citations show as ADDIN ZOTERO_ITEM codes — or won't update",
+      "based_on": "C2/C3 (28 questions combined); rows #58, #139, #140 in the support analysis",
+      "official": "https://www.zotero.org/support/kb/word_field_codes",
+      "start": "q-cite-symptom",
+      "steps": {
+        "q-cite-symptom": {
+          "type": "question",
+          "heading": "Which of these matches your document?",
+          "body": "<p>Both symptoms look broken. Only one is actually a settings display, and it takes five seconds to fix.</p>",
+          "options": [
+            { "label": "I see text like { ADDIN ZOTERO_ITEM CSL_CITATION … } instead of citations", "next": "fix-codes" },
+            { "label": "A citation (or the bibliography) shows old data after I edited the item in Zotero", "next": "fix-stale" }
+          ]
+        },
+        "fix-codes": {
+          "type": "fix",
+          "heading": "Toggle field codes off — your citation data is fine",
+          "body": "<ol><li>Press <strong>Alt+F9</strong> (Windows) or <strong>Option-Fn-F9</strong> (Mac) in Word. In LibreOffice: <strong>Ctrl+F9</strong>. The codes flip back to formatted citations.</li><li>If codes keep coming back: Word → <strong>Options/Preferences → Advanced (Windows) or View (Mac)</strong> → untick <em>“Show field codes instead of their values”</em>.</li><li>With <strong>Track Changes</strong> on, Word may show both versions of a changed citation — accept the change twice and the codes disappear.</li></ol><p>Nothing was broken: Zotero stores citations as Word fields, and Word was showing you the machinery.</p>",
+          "options": [
+            { "label": "Yes, solved", "next": "done-cites" },
+            { "label": "No, still showing codes", "next": "exit-codes-kb" }
+          ]
+        },
+        "fix-stale": {
+          "type": "fix",
+          "heading": "Refresh — but fix the item in Zotero first",
+          "body": "<ol><li><strong>Correct the item in Zotero</strong> — the author, year or title that is wrong. Never edit the citation text in Word: manual edits block automatic updates.</li><li>Back in the document, click <strong>Refresh</strong> in the Zotero tab. Every citation and the bibliography re-read from Zotero.</li><li>Still stale? Someone edited that citation as text. Select it, <strong>delete it</strong>, and re-insert with <strong>Add/Edit Citation</strong>, then Refresh.</li><li>“Anonymous” in the citation means the item has no author in Zotero — fill one in, then Refresh.</li></ol>",
+          "options": [
+            { "label": "Yes, solved", "next": "done-cites" },
+            { "label": "No, still won't update", "next": "exit-stale-kb" }
+          ]
+        },
+        "exit-codes-kb": {
+          "type": "exit",
+          "heading": "Persistent field-code display goes to the official KB and forum",
+          "body": "<p>If codes survive a settings change on both counts, the document may have been produced by another tool. The official KB page lists the remaining display settings per platform.</p>",
+          "link_label": "Official KB: word field codes",
+          "link": "https://www.zotero.org/support/kb/word_field_codes",
+          "forum": "https://forums.zotero.org/"
+        },
+        "exit-stale-kb": {
+          "type": "exit",
+          "heading": "Take the document specifics to the official KB",
+          "body": "<p>Documents that were converted between formats (Google Docs → Word, .odt → .docx) can lose field links in ways this flow can't diagnose. The KB page covers the remaining cases; the forum is good at converted documents if you say exactly which conversion.</p>",
+          "link_label": "Official KB: citations not updating",
+          "link": "https://www.zotero.org/support/kb/citations_not_updating",
+          "forum": "https://forums.zotero.org/"
+        },
+        "done-cites": {
+          "type": "done",
+          "heading": "Your citations are live again",
+          "body": "<p>Keep the habits that prevent this: edit items in Zotero, click Refresh, and never retype a citation — <a href=\"../paths/writing-with-citations/fix-formatting-errors.html\">lesson 8: Fix common citation formatting errors</a> has the full checklist.</p>"
+        }
+      }
+    },
+    {
+      "id": "sync-failing",
+      "title": "PDFs or changes won't sync across devices",
+      "based_on": "C5 (16 questions); rows #99, #132, #133, #142, #143 in the support analysis",
+      "official": "https://www.zotero.org/support/kb/files_not_syncing",
+      "start": "q-sync-symptom",
+      "steps": {
+        "q-sync-symptom": {
+          "type": "question",
+          "heading": "What do you see?",
+          "body": "<p>Data (items, notes, tags) and files (PDFs) sync separately — the symptom tells you which half to look at.</p>",
+          "options": [
+            { "label": "A sync error icon or message appears", "next": "fix-sync-error" },
+            { "label": "No error, but a PDF is missing on my other device", "next": "fix-file-missing" },
+            { "label": "Storage quota warnings keep appearing", "next": "fix-quota" },
+            { "label": "Zotero keeps asking to resolve the same conflicts", "next": "fix-conflicts" }
+          ]
+        },
+        "fix-sync-error": {
+          "type": "fix",
+          "heading": "Read the error — it names the problem",
+          "body": "<ol><li>Click the <strong>sync error icon</strong> (next to the Sync button on desktop, or at the bottom of the items list on mobile). The message is specific.</li><li><strong>Username/password errors:</strong> re-enter credentials in Settings → Sync → Data Syncing.</li><li><strong>“Too many authentication failures” / HTTP 429:</strong> you're rate-limited, usually after many rapid retries — wait a few minutes and sync once (row #99 in the support data).</li><li>Anything else: the error text usually links to a page with the fix — follow it before posting.</li></ol>",
+          "options": [
+            { "label": "Yes, solved", "next": "done-sync" },
+            { "label": "No, error persists", "next": "exit-sync-forum" }
+          ]
+        },
+        "fix-file-missing": {
+          "type": "fix",
+          "heading": "Was the file ever uploaded? Almost always the answer is no",
+          "body": "<ol><li>Confirm the file opens on the device where it was <strong>added</strong>.</li><li>Sign in at <strong>zotero.org</strong> and check your online library: is the attachment there? (An attachment <em>item</em> without a file can sync while the file itself never did.)</li><li>If the file never uploaded: on the desktop device that has it — <strong>Settings → Sync → Reset → Reset File Sync History</strong>. Use <em>only</em> that option; the others in that pane are destructive. Then sync and re-check zotero.org.</li><li>If it uploaded but device B lacks it: check device B uses the <strong>same account and the same file-sync setting</strong> (Zotero storage vs. WebDAV can't see each other).</li><li>Using <strong>linked files</strong> (chain icon)? Those don't sync at all by design — convert via Tools → Manage Attachments → <em>Convert Linked Files to Stored Files</em>.</li></ol>",
+          "options": [
+            { "label": "Yes, solved", "next": "done-sync" },
+            { "label": "No, still missing", "next": "exit-sync-forum" }
+          ]
+        },
+        "fix-quota": {
+          "type": "fix",
+          "heading": "Quota warnings: find what's filling 300 MB, then decide",
+          "body": "<ol><li>Check your usage at <a href=\"https://www.zotero.org/settings/storage\">zotero.org storage settings</a>. The free plan includes 300 MB of file storage; data (items, notes) is unlimited and never quota'd.</li><li>Recently upgraded a plan? <strong>Re-sync the device where the files were added</strong> — the upgrade doesn't retro-push; the warning can persist until it does (row #142).</li><li>Don't want to pay? Delete unneeded attachments (right-click an item → Remove Attachment… keep the item), or move large PDFs to <strong>linked files</strong> with your own cloud storage — accepting they won't sync through Zotero.</li></ol>",
+          "options": [
+            { "label": "Yes, solved", "next": "done-sync" },
+            { "label": "No, warnings persist", "next": "exit-sync-forum" }
+          ]
+        },
+        "fix-conflicts": {
+          "type": "fix",
+          "heading": "Repeated conflicts: break the loop deliberately",
+          "body": "<ol><li>Sync <strong>one device at a time</strong>: let device A finish completely before syncing device B. Parallel syncs are the most common cause of a repeating conflict prompt (row #143).</li><li>When the dialog appears, pick a version deliberately — don't cancel; cancelled conflicts queue again.</li><li>If the <em>same</em> conflict returns after a clean single-device sync, capture a Debug ID (Help → Debug Output Logging) and take it to the forum — that's a genuine bug report, not a setup mistake.</li></ol>",
+          "options": [
+            { "label": "Yes, solved", "next": "done-sync" },
+            { "label": "No, conflicts return", "next": "exit-sync-forum" }
+          ]
+        },
+        "exit-sync-forum": {
+          "type": "exit",
+          "heading": "Sync bugs go to the forum with a Debug ID",
+          "body": "<p>Before posting: Help → Debug Output Logging → <em>Restart with Logging Enabled…</em>, reproduce the sync error, then Submit to get a Debug ID. Include it, plus the error text, in your post.</p>",
+          "link_label": "Official KB: files not syncing",
+          "link": "https://www.zotero.org/support/kb/files_not_syncing",
+          "forum": "https://forums.zotero.org/"
+        },
+        "done-sync": {
+          "type": "done",
+          "heading": "Your library syncs again",
+          "body": "<p>Review the settings decisions in <a href=\"../paths/power-user/sync-across-devices.html\">lesson 9: Sync your library across devices</a> — data vs. file syncing is the distinction behind most of these problems.</p>"
+        }
+      }
+    }
+  ]
+}

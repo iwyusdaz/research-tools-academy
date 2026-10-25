@@ -45,4 +45,4 @@ Your invited teammate accepts, syncs, and sees the group library in their Zotero
 
 - Teammate can't see the group → confirm they accepted the invite and that *their* data syncing is on, with the same account
 - **Files** don't appear for members → group file sharing must be enabled by an admin (and remember: open public groups can't); see [troubleshooting: sync flow](../../troubleshoot/index.html#flow-sync-failing)
-- Group vanished from the web library but shows in the desktop app (a real case in the support data, row #22) → product-side issue: check your [online groups settings](https://www.zotero.org/settings/groups) and post in the [forums](https://forums.zotero.org/) if it persists
+- Group vanished from the web library but shows in the desktop app (a real case in the support data, row #22) → product-side issue: check your groups page on [zotero.org](https://www.zotero.org/groups/) and post in the [forums](https://forums.zotero.org/) if it persists
