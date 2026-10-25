@@ -1,0 +1,22 @@
+{%- comment -%}
+  Just the Docs wraps wide tables in <div class="table-wrapper"> with
+  overflow-x, which axe flags as a scrollable region without keyboard access.
+  This include gives every wrapper tabindex="0" and a labelled region role so
+  keyboard users can scroll it. Progressive enhancement: harmless when no
+  wrappers exist.
+{%- endcomment -%}
+<script>
+(function () {
+  function fix() {
+    document.querySelectorAll(".table-wrapper").forEach(function (el) {
+      if (el.hasAttribute("tabindex")) return;
+      el.setAttribute("tabindex", "0");
+      el.setAttribute("role", "region");
+      var caption = el.querySelector("table caption");
+      el.setAttribute("aria-label", caption ? caption.textContent.trim() : "Scrollable data table");
+    });
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", fix);
+  else fix();
+})();
+</script>
