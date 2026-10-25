@@ -1,0 +1,70 @@
+// Custom styles for the Research Tools Academy.
+// Loaded automatically by Just the Docs via `_sass/custom/custom.scss`.
+
+.disclaimer {
+  background: #eef3f8;
+  border: 1px solid #b9cadd;
+  border-radius: 4px;
+  color: #1f2d3d;
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+  padding: 0.6rem 0.9rem;
+}
+
+.illustration-note {
+  color: #444;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+figure {
+  margin: 1.25rem 0;
+}
+
+figcaption {
+  color: #444;
+  font-size: 0.85rem;
+  margin-top: 0.4rem;
+}
+
+// Version stamp shown at the end of every lesson
+.version-stamp {
+  border-top: 1px solid $border-color;
+  color: #555;
+  font-size: 0.85rem;
+  margin-top: 2rem;
+  padding-top: 0.75rem;
+}
+
+// Milestone / callout badges used in lessons
+.milestone-badge {
+  background: #1a4f72;
+  border-radius: 3px;
+  color: #fff;
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 0.15rem 0.5rem;
+  vertical-align: middle;
+}
+
+main .svg-figure svg {
+  height: auto;
+  max-width: 100%;
+}
+
+// Job aid cards print nicely on one page
+@media print {
+  .disclaimer,
+  .side-bar,
+  .search,
+  .main-nav,
+  footer,
+  .back-to-top {
+    display: none !important;
+  }
+  .main-content {
+    max-width: 100% !important;
+  }
+}

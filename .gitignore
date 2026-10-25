@@ -1,0 +1,17 @@
+# Secrets
+.env
+
+# Dependencies
+node_modules/
+
+# OS artifacts
+.DS_Store
+
+# Dry-run output (never used as real results)
+dry-run/
+
+# Evaluation output that is regenerated per run (keep committed summaries)
+evaluation/output/
+
+# Editor noise
+*.swp

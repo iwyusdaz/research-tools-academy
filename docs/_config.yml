@@ -1,0 +1,60 @@
+# Jekyll configuration for the Research Tools Academy (unofficial Zotero academy)
+title: Research Tools Academy
+description: "An unofficial customer education academy for Zotero, aimed at graduate students. Not affiliated with or endorsed by Zotero or its developers."
+theme: null
+remote_theme: just-the-docs/just-the-docs@v0.12.0
+
+url: https://iwyusdaz.github.io
+baseurl: /research-tools-academy
+
+# Build settings
+markdown: kramdown
+kramdown:
+  parse_block_html: true
+
+# Just the Docs navigation
+nav_sort: order
+search_enabled: true
+
+heading_anchors: true
+
+back_to_top: true
+back_to_top_text: "Back to top"
+
+footer_content: >-
+  Content licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>;
+  code licensed <a href="https://opensource.org/license/mit">MIT</a>.
+  This is an independent learning project and is not affiliated with or endorsed by Zotero or its developers.
+
+gh_edit_link: false
+
+# Exclude from Pages build
+exclude:
+  - analysis/
+  - evaluation/
+  - node_modules/
+  - dry-run/
+  - package.json
+  - README.md
+  - ATTRIBUTION.md
+  - CHANGELOG.md
+  - DECISIONS.md
+  - STATUS.md
+  - LICENSE
+  - LICENSE-CODE
+  - "*.tmp"
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+
+color_scheme: light
+
+# Every Markdown page uses the (overridden) `page` layout so the disclaimer
+# include appears above the content on every page.
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
