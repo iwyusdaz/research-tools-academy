@@ -28,7 +28,7 @@ This academy is for graduate students starting a literature review or thesis. It
 
 ## How the academy was designed
 
-Every lesson moves an [activation milestone]({{ "strategy/metrics-plan.html" | relative_url }}) — from *first capture* (M1) to *first citation* (M3, the academy's headline activation event) to *sync* (M5). The curriculum comes from the [support question analysis]({{ "about/method.html" | relative_url }}): 62% of the 128 support questions and bug reports fall into five categories, and 40% were knowledge or workflow gaps that education can fix.
+Every lesson moves an [activation milestone]({{ "strategy/metrics-plan.html" | relative_url }}) — from *first capture* (M1) to *first citation* (M3, the academy's headline activation event) to *sync* (M5). The curriculum comes from the [support question analysis]({{ "about/method.html" | relative_url }}): 62% of the 128 support questions and bug reports fall into five categories, and 40% were education-fixable — knowledge gaps or avoidable documented behaviors.
 
 ## If something breaks
 

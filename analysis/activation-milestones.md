@@ -31,7 +31,7 @@ Every lesson moves at least one milestone. The map is the academy's scope contra
 |---|---|---|---|
 | Getting started | 1. Install Zotero and the browser connector | M1 (setup) | /paths/getting-started/install-zotero.html |
 | Getting started | 2. Save your first sources from the web | **M1** | /paths/getting-started/save-first-sources.html |
-| Getting started | 3. Add PDFs and retrieve metadata | M2 | /paths/getting-started/add-pdfs.html |
+| Getting started | 3. Add PDFs and retrieve metadata | M2 (setup) | /paths/getting-started/add-pdfs.html |
 | Getting started | 4. Organize with collections and tags | **M2** | /paths/getting-started/collections-and-tags.html |
 | Writing with citations | 5. Install the word processor plugin | M3 (setup) | /paths/writing-with-citations/install-word-plugin.html |
 | Writing with citations | 6. Insert citations and choose a style | **M3** | /paths/writing-with-citations/insert-citations.html |

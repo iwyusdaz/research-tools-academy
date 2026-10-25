@@ -4,6 +4,7 @@ parent: Getting started
 nav_order: 3
 layout: lesson
 minutes: 5
+milestone_kind: setup
 milestone: M2
 description: Turn a folder of stray PDFs into citable items with automatic metadata retrieval.
 next_path: /paths/getting-started/collections-and-tags.html
@@ -29,7 +30,7 @@ Papers arrive as loose PDFs — from email, a supervisor, or before you installe
 
 ## Steps
 
-1. **Drag the PDF into Zotero** — onto the middle column of the library. It becomes a standalone attachment (a plain file with no metadata).
+1. **Drag the PDF into Zotero** — onto the middle column of the library. It becomes a standalone attachment (a plain file with no metadata). Zotero usually tries to retrieve metadata on its own after the drag — if it succeeds, the item fills in by itself; if it can't (scans often can't), the PDF stays a plain attachment and you continue with step 2.
 2. **Right-click the PDF → Create Parent Item.** Zotero creates an empty item that the PDF is attached to.
 3. **Enter an identifier.** Type the article's **DOI** (or the book's **ISBN**) into the field and press Enter. Zotero looks up the metadata and fills in title, authors, year and journal.
 4. **No identifier handy?** Choose **Manual Entry** in the same dialog and fill in the essentials yourself, or drop the PDF onto the browser save button while viewing the article's page.

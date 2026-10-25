@@ -4,7 +4,8 @@ parent: Writing with citations
 nav_order: 4
 layout: lesson
 minutes: 7
-milestone: M3
+milestone: M3/M4
+milestone_kind: retain
 description: Diagnose the five citation formatting problems that fill the support forums — and the right order to fix them in.
 next_path: /paths/power-user.html
 next_text: Power user path

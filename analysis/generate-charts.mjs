@@ -161,7 +161,7 @@ writeFileSync(join(outDir, "category-frequency.svg"), barChart(
 writeFileSync(join(outDir, "fix-route.svg"), stackedChart(
   fixSplit,
   "Fix route by category: education vs product",
-  "Stacked horizontal bar chart splitting 128 Zotero support questions by category into education-fixable knowledge gaps, avoidable documented behavior, and product or bug issues. Overall 40 questions were education-fixable, 11 avoidable documented behavior, and 77 product or bug issues. Citations and citation styles is the most education-heavy category with 12 of its 13 questions education-related, while PDF reader, installation and mobile app categories are mostly product issues.",
+  "Stacked horizontal bar chart splitting 128 Zotero support questions by category into education-fixable knowledge gaps, avoidable documented behavior, and product or bug issues. Overall 40 questions were education-fixable, 11 avoidable documented behavior, and 77 product or bug issues. Citations and citation styles is the most education-heavy category with 12 of its 13 questions education-fixable (7 knowledge gaps plus 5 avoidable documented behaviors), while PDF reader, installation and mobile app categories are mostly product issues.",
   "ch-fix"
 ));
 

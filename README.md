@@ -12,7 +12,7 @@ An unofficial customer education academy for Zotero (the free, open-source refer
 
 Graduate students lose their first weeks to a reference manager — and the support data shows exactly where they get stuck. I analyzed **145 real, public support questions** (131 Zotero forum threads + 14 official knowledge-base topics, collected 2026-10-25, paraphrased, no usernames):
 
-**The headline finding: five categories hold 62% of all questions — and 40% of everything people ask for help with is a knowledge or workflow gap that education can fix.**
+**The headline finding: five categories hold 62% of all questions — and 40% of everything people ask for help with is education-fixable (a knowledge gap or an avoidable documented behavior).**
 
 | Category | Questions + bugs | Share |
 |---|---:|---:|
@@ -25,7 +25,7 @@ Graduate students lose their first weeks to a reference manager — and the supp
 
 ![Bar chart: support questions by category. Browser connector 20, PDF reader 16, sync 16, Word plugin 15, citations 13, installation 13, mobile 12, import/export 9, groups 6, search 6, bibliography 2.](analysis/figures/category-frequency.svg)
 
-Splitting each question by *fix route* — the customer-education version of "is it training?" — 40% were knowledge gaps (education), 9% documented-but-avoidable behavior (both), and 60% product or bug issues that education honestly cannot fix (77 questions routed to diagnosis-and-forum, not fake fixes). Citations & citation styles was the most education-fixable category of all: 12 of its 13 questions.
+Splitting each question by *fix route* — the customer-education version of "is it training?" — 40% were education-fixable (31% pure knowledge gaps + 9% documented-but-avoidable behavior, 51 of 128 questions), and 60% were product or bug issues that education honestly cannot fix (77 questions routed to diagnosis-and-forum, not fake fixes). Citations & citation styles was the most education-fixable category of all — 12 of its 13 questions (7 knowledge gaps + 5 documented-but-avoidable behaviors).
 
 ## Audience and context
 
@@ -46,7 +46,7 @@ Every lesson is written from the official Zotero documentation and stamped *"Las
 
 | Decision | Alternatives considered | Rationale and evidence |
 |---|---|---|
-| Needs analysis from **real support questions** | Assume needs from feature lists | Grounded and citable; reveals which problems are product issues vs. knowledge gaps (40% / 60% split). Forum URLs in every row of the dataset |
+| Needs analysis from **real support questions** | Assume needs from feature lists | Grounded and citable; reveals which problems are product issues vs. education-fixable (40% / 60% split). Forum URLs in every row of the dataset |
 | **Milestone-driven paths** (M1–M5) | Feature-by-feature tour | Customer education is judged on adoption and time-to-value; every lesson maps to a milestone and lessons that moved none were cut |
 | **Short task-based lessons** (≤ 7 min) | A long course | Users learn at the moment of need; the week-1 support data clusters on exactly two skills (connector, Word plugin) |
 | **Troubleshooting tool, not FAQ** | FAQ page | Guided one-fix-at-a-time diagnosis for the top-5 issues; each fix step ends in "Did this solve it?"; honest exits to the official forum with Debug ID guidance where a fix isn't in the user's control |
@@ -55,9 +55,9 @@ Every lesson is written from the official Zotero documentation and stamped *"Las
 
 ## Evidence and evaluation
 
-- **What was measured:** support-question frequencies and fix routes (real, n=145); keyboard-only task completion of both tools (34 scripted checks, all passing); axe-core audits of every page (0 critical/serious); a structured **Agent review**.
+- **What was measured:** support-question frequencies and fix routes (real, n=145); keyboard-only task completion of both tools (46 scripted checks, all passing); axe-core audits of every page (0 critical/serious); a structured **Agent review** ([full report](evaluation/agent-review.md)), whose 13 findings were triaged and fixed on 2026-10-26 (see [CHANGELOG.md](CHANGELOG.md)).
 - **What it can and cannot show:** the analysis shows what people ask for, not true incidence (forum posters are a biased sample — stated in the analysis). The keyboard tests prove the flows work, not that learners succeed. The Agent review shares the underlying model with the author — labeled as such. Simulated-learner runs and the review panel are **pipeline-ready but pending** (`npm run eval:pending`; never faked). No real learners have tested this.
-- **What it changed:** the 40% knowledge-gap finding shaped the two "writing" job aids; the week-1 cluster justified front-loading the Getting started path; the product-issue share shaped the troubleshooting tool's honest forum exits. Evaluation-driven revisions are recorded in [CHANGELOG.md](CHANGELOG.md).
+- **What it changed:** the 40% education-fixable finding shaped the two "writing" job aids; the week-1 cluster justified front-loading the Getting started path; the product-issue share shaped the troubleshooting tool's honest forum exits. Evaluation-driven revisions are recorded in [CHANGELOG.md](CHANGELOG.md).
 
 ## Accessibility
 

@@ -10,8 +10,8 @@ This analysis is the foundation of the academy. It answers three questions:
 
 **Headline findings**
 
-- **51 of 128 questions (40%) were knowledge or workflow gaps that education can address.** The other 77 (60%) were product bugs, crashes, or side effects of documented limitations — education cannot fix those, and pretending otherwise erodes trust.
-- **Citations & citation styles is the most education-fixable category:** 12 of its 13 non-feature questions (92%) were knowledge gaps.
+- **51 of 128 questions (40%) were education-fixable** — 40 (31%) knowledge or workflow gaps plus 11 (9%) documented-but-avoidable behaviors. The other 77 (60%) were product bugs, crashes, or side effects of documented limitations — education cannot fix those, and pretending otherwise erodes trust.
+- **Citations & citation styles is the most education-fixable category:** 12 of its 13 non-feature questions (92%) were education-fixable (7 knowledge gaps + 5 documented-behavior workarounds).
 - **The largest category overall — the browser connector (20 questions) — splits both ways:** genuine product pain (PDFs not attaching, items not appearing) sits next to pure setup gaps (save button missing, "Zotero is unavailable" because the desktop app is closed).
 - **Only 6 of 128 questions (5%) were day-1 problems.** Forum posters overwhelmingly hit trouble in month 1+, which is itself a finding: the people loud enough to post are established users, so a new-user academy cannot be designed from forum volume alone (see [Limitations](#limitations)).
 
@@ -90,7 +90,7 @@ Coding was done by one person (the author) in one pass. No second coder was used
 
 ### 2.2 The "is it training?" test: education vs product
 
-![Stacked horizontal bar chart splitting 128 questions by category into education-fixable knowledge gaps, avoidable documented behavior, and product or bug issues. Overall 40 were education-fixable, 11 avoidable documented behavior, and 77 product or bug issues. Citations and citation styles is the most education-heavy category with 12 of 13 questions education-related. PDF reader, installation and mobile categories are mostly product issues.](figures/fix-route.svg)
+![Stacked horizontal bar chart splitting 128 questions by category into education-fixable knowledge gaps, avoidable documented behavior, and product or bug issues. Overall 40 were education-fixable, 11 avoidable documented behavior, and 77 product or bug issues. Citations and citation styles is the most education-heavy category with 12 of its 13 questions education-fixable (7 knowledge gaps plus 5 avoidable documented behaviors). PDF reader, installation and mobile categories are mostly product issues.](figures/fix-route.svg)
 
 | Route | Questions + bugs (n=128) | Share | What the academy does about it |
 |---|---:|---:|---|

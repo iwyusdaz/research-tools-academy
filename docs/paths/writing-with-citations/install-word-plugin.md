@@ -5,6 +5,7 @@ nav_order: 1
 layout: lesson
 minutes: 5
 milestone: M3
+milestone_kind: setup
 description: Get the Zotero tab into Word (or LibreOffice, or Google Docs) so you can cite in your document.
 next_path: /paths/writing-with-citations/insert-citations.html
 next_text: Insert citations and choose a style
@@ -33,7 +34,9 @@ Citing without the plugin means typing references by hand and re-formatting them
 2. **Open Word** (or LibreOffice) and look for the **Zotero** tab in the ribbon. On Google Docs, the Zotero menu loads through the browser connector instead — no separate install.
 3. **Tab missing? Reinstall the plugin from inside Zotero:** in Zotero's **Settings → Cite → Word Processors**, click **Install Microsoft Word Add-in** (the exact button name matches your word processor), then fully quit and reopen Word.
 4. **Still missing on a Mac?** In Word, check **Tools → Templates and Add-ins…** and confirm *Zotero.dotm* is listed and ticked under **Global Templates and Add-ins**.
-5. **Work laptop that blocks add-ins?** That's the macOS *permissions* case most common in the support data: Zotero needs permission to control Word. See the flow below — it walks through granting it.
+5. **Work laptop that blocks add-ins?** The cause differs by platform:
+   - **macOS:** the common case is a missing *permission* — Zotero needs permission to control Word (the managed-laptop case most common in the support data). The flow's Mac branch walks the System Settings grant step by step.
+   - **Windows:** the add-in may be disabled by Word's **Trust Center** or by IT policy. The flow's Windows branch covers Disabled Items and Trust Center settings — and if IT policy blocks it, only IT can whitelist Zotero.
 
 ## Check it worked
 

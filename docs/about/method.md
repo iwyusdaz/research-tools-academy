@@ -29,7 +29,7 @@ Each row was coded three ways: by **category** (11 categories, from browser conn
 ## Headline findings
 
 1. **Five categories hold 62% of the questions**: browser connector & saving (20), PDF reader & annotations (16), sync & storage (16), word processor plugin (15), citations & styles (13).
-2. **40% of questions (51 of 128) were education-fixable** — and citations & citation styles is the most education-heavy category of all (12 of 13 questions).
+2. **40% of questions (51 of 128) were education-fixable** — and citations & citation styles is the most education-heavy category of all (12 of its 13 questions: 7 knowledge gaps + 5 documented-but-avoidable behaviors).
 3. **Problems skew late**: 77% of forum questions came from month-1+ users. Week-1 questions cluster on the connector and the Word plugin — exactly where the academy front-loads its two main paths.
 
 ## What the academy does with it

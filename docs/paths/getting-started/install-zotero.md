@@ -4,6 +4,7 @@ parent: Getting started
 nav_order: 1
 layout: lesson
 minutes: 6
+milestone_kind: setup
 milestone: M1
 description: Install the Zotero desktop app and the browser connector so you can start saving sources in the next lesson.
 next_path: /paths/getting-started/save-first-sources.html

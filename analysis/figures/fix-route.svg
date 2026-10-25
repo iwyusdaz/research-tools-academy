@@ -6,7 +6,7 @@
 </pattern>
 </defs>
 <title id="ch-fix-t">Fix route by category: education vs product</title>
-<desc id="ch-fix-d">Stacked horizontal bar chart splitting 128 Zotero support questions by category into education-fixable knowledge gaps, avoidable documented behavior, and product or bug issues. Overall 40 questions were education-fixable, 11 avoidable documented behavior, and 77 product or bug issues. Citations and citation styles is the most education-heavy category with 12 of its 13 questions education-related, while PDF reader, installation and mobile app categories are mostly product issues.</desc>
+<desc id="ch-fix-d">Stacked horizontal bar chart splitting 128 Zotero support questions by category into education-fixable knowledge gaps, avoidable documented behavior, and product or bug issues. Overall 40 questions were education-fixable, 11 avoidable documented behavior, and 77 product or bug issues. Citations and citation styles is the most education-heavy category with 12 of its 13 questions education-fixable (7 knowledge gaps plus 5 avoidable documented behaviors), while PDF reader, installation and mobile app categories are mostly product issues.</desc>
 
 <rect x="8" y="30" width="14" height="14" fill="#1a4f72"></rect>
 <text x="27" y="42" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#1f2d3d">Education (knowledge gap)</text>

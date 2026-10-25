@@ -20,7 +20,21 @@ description: How adoption of the academy would be measured — activation, time-
 | **Content freshness** | % of lessons whose version stamp is within one minor Zotero release | Maintenance audit (manual) | 100% |
 | *(secondary)* Engagement | Path completion, skills-check completion | Academy analytics | Never a target; diagnostic only |
 
-Milestone definitions (M1–M5, E1–E2) live in [`analysis/activation-milestones.md`](https://github.com/iwyusdaz/research-tools-academy/blob/main/analysis/activation-milestones.md). Time-to-value is anchored to M3 because the support data shows the first-citation stage is the confidence cliff.
+## The milestones, in brief
+
+The metric set anchors to activation milestones — observable user behaviors, not lesson completion. The short version:
+
+| Milestone | Observable behavior | Kind |
+|---|---|---|
+| **M1 — First capture** | Connector installed; first item saved from the browser | Core (time-to-value) |
+| **M2 — Working collection** | 10 items in at least one collection | Core (time-to-value) |
+| **M3 — First citation** | First citation inserted in a document via the plugin — **the primary activation event** | Core (time-to-value) |
+| **M4 — Correct bibliography** | Bibliography generated in the required style and updating after edits | Core (time-to-value) |
+| **M5 — Sync set up** | Data sync enabled and verified on a second device (for multi-device users) | Core (time-to-value) |
+| **E1 — Annotation workflow** | Highlights/notes extracted from a PDF into a note used for writing | Extended (retention) |
+| **E2 — Team collaboration** | User contributes to (or administers) a group library | Extended (retention) |
+
+Time-to-value is anchored to M3 because the support data shows the first-citation stage is the confidence cliff. Full definitions — including why each behavior is the milestone, journey stages and the data signals behind them — are in the repository: [`analysis/activation-milestones.md`](https://github.com/iwyusdaz/research-tools-academy/blob/main/analysis/activation-milestones.md).
 
 ## Comparison approach
 
