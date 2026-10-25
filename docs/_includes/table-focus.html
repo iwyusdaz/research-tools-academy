@@ -17,7 +17,9 @@
       var caption = el.querySelector("table caption");
       var label = caption ? caption.textContent.trim() : null;
       if (!label) {
-        // Derive from the nearest preceding heading; fall back to a numbered label.
+        /* Derive from the nearest preceding heading; fall back to a numbered
+           label. Block comment, because Just the Docs minifies HTML to one
+           line and a line comment would swallow the rest of the script. */
         var prev = el.previousElementSibling;
         while (prev && !/^H[1-6]$/.test(prev.tagName)) prev = prev.previousElementSibling;
         label = prev ? prev.textContent.trim() + " — data table" : "Data table " + (idx + 1);
