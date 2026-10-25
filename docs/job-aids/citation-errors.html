@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fix the 5 most common citation errors — Research Tools Academy job aid</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    color: #1f2d3d;
+    font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.45;
+    margin: 0 auto;
+    max-width: 52rem;
+    padding: 1.5rem;
+  }
+  h1 { border-bottom: 3px solid #1a4f72; font-size: 1.5rem; margin: 0 0 0.25rem; padding-bottom: 0.4rem; }
+  .subtitle { color: #44566b; margin: 0 0 1rem; }
+  table { border-collapse: collapse; margin: 1rem 0; width: 100%; }
+  caption { caption-side: top; font-weight: 700; padding-bottom: 0.4rem; text-align: left; }
+  th, td { border: 1px solid #5a6b7b; padding: 0.45rem 0.6rem; text-align: left; vertical-align: top; }
+  th { background: #eef3f8; }
+  .num { font-weight: 700; white-space: nowrap; }
+  .rule {
+    border: 2px solid #1a4f72;
+    border-radius: 6px;
+    font-weight: 600;
+    margin: 1rem 0;
+    padding: 0.6rem 0.9rem;
+  }
+  .disclaimer {
+    border-top: 1px solid #b9cadd;
+    color: #44566b;
+    font-size: 0.8rem;
+    margin-top: 1.25rem;
+    padding-top: 0.6rem;
+  }
+  a { color: #1a4f72; }
+  .back { font-size: 0.9rem; margin-top: 1rem; }
+  @media print {
+    @page { size: A4; margin: 12mm; }
+    body { font-size: 12.5px; max-width: none; padding: 0; }
+    .back { display: none; }
+    tr { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<h1>Fix the 5 most common citation errors</h1>
+<p class="subtitle">Try them in this order · one-page job aid · Research Tools Academy</p>
+
+<table>
+  <caption>Fix in order — the right order is: fix the item in Zotero, refresh, and only then touch the text.</caption>
+  <thead>
+    <tr><th scope="col">#</th><th scope="col">Symptom</th><th scope="col">Cause</th><th scope="col">Fix</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="num">1</td>
+      <td>Text like <code>{ ADDIN ZOTERO_ITEM … }</code> instead of citations</td>
+      <td>Word is showing field codes</td>
+      <td><strong>Alt+F9</strong> (Windows) / <strong>Option-Fn-F9</strong> (Mac); LibreOffice <strong>Ctrl+F9</strong>. Persistent: Word Options/Preferences → untick “field codes instead of values”.</td>
+    </tr>
+    <tr>
+      <td class="num">2</td>
+      <td>Citation shows “Anonymous” or a wrong year</td>
+      <td>Item metadata incomplete in Zotero</td>
+      <td>Add the author/year to the <em>item in Zotero</em> → click <em>Refresh</em> in the document.</td>
+    </tr>
+    <tr>
+      <td class="num">3</td>
+      <td>Citation won't update after you edited the item</td>
+      <td>Document out of sync — or the citation was edited as text</td>
+      <td><em>Refresh</em>. Still stale: delete that citation and re-insert it from the Zotero tab.</td>
+    </tr>
+    <tr>
+      <td class="num">4</td>
+      <td>Wrong style, or the program rejects the punctuation</td>
+      <td>Style set in Document Preferences isn't the required one</td>
+      <td>Zotero tab → <em>Document Preferences</em> → pick the required style. Everything reformats at once. Genuine style bugs → <a href="https://forums.zotero.org/">official forums</a>.</td>
+    </tr>
+    <tr>
+      <td class="num">5</td>
+      <td>Quote missing a page number, or “Smith (2024) says…” rendered wrong</td>
+      <td>Locator / omit-author not set at insert time</td>
+      <td>Click the citation bubble → <em>Page</em> field, or tick <em>Omit Author</em>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="rule">Golden rule: never edit citation or bibliography text in the document. Fix the item in Zotero → Refresh. For last-mile tweaks on a final copy: back up the file, then <em>Unlink Citations</em>, then edit as plain text.</p>
+
+<p class="disclaimer"><strong>Disclaimer:</strong> This is an independent learning project and is not affiliated with or endorsed by Zotero or its developers. Always check the <a href="https://www.zotero.org/support/kb/word_field_codes">official Zotero documentation</a> for the latest instructions. Last verified against Zotero 10.0.6 documentation on 2026-10-25. License: CC BY 4.0.</p>
+
+<p class="back"><a href="index.html">← All job aids</a> · <a href="../index.html">Academy home</a></p>
+</body>
+</html>
