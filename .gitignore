@@ -15,3 +15,6 @@ evaluation/output/
 
 # Editor noise
 *.swp
+
+# Local security-scanner state (never committed)
+.mimosa/

@@ -1,0 +1,15 @@
+{%- comment -%}
+  Rendered at the end of lesson pages (layout: lesson). Shows the observable
+  outcome check reminder, the "what's next" link and the official-docs link
+  using page front matter. All values optional.
+{%- endcomment -%}
+{%- if page.next_path -%}
+<div class="next-steps">
+  {%- if page.next_text -%}
+  <p><strong>Next step:</strong> <a href="{{ page.next_path | relative_url }}">{{ page.next_text }}</a></p>
+  {%- endif -%}
+  {%- if page.official_path -%}
+  <p>Official documentation for this lesson: <a href="{{ page.official_path }}">{{ page.official_label | default: page.official_path }}</a></p>
+  {%- endif -%}
+</div>
+{%- endif -%}
