@@ -9,5 +9,8 @@
     "eval:dry-run": "node evaluation/run-simulations.mjs --dry-run",
     "test:keyboard": "node evaluation/keyboard-tests.mjs",
     "verify": "node evaluation/keyboard-tests.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.57.0"
   }
 }
