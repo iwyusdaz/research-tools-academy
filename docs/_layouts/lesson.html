@@ -2,5 +2,13 @@
 layout: default
 ---
 {% include disclaimer.html %}
+<div class="lesson-meta">
+  {%- if page.minutes -%}<span class="lesson-minutes">About {{ page.minutes }} minutes</span>{%- endif -%}
+  {%- if page.milestone -%}
+  <span class="milestone-badge" title="This lesson moves adoption milestone {{ page.milestone }}">{{ page.milestone }}</span>
+  <span class="lesson-milestone-label">moves milestone {{ page.milestone }}</span>
+  {%- endif -%}
+</div>
 {{ content }}
 {% include next-steps.html %}
+<p class="version-stamp">Last verified against Zotero {{ page.zotero_version | default: "10.0.6" }} documentation on {{ page.verified_date | default: "2026-10-25" }}. Zotero's interface changes between versions — if a step does not match what you see, check the official documentation linked above and report the lesson via the “Report an outdated lesson” issue template.</p>
