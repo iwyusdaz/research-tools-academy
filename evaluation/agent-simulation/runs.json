@@ -1,0 +1,180 @@
+{
+  "meta": {
+    "label": "AGENT-SIMULATED. Not human or real-learner data.",
+    "date": "2026-11-11",
+    "method": "One AI agent (Claude, run inside the build environment, no API key) role-played 9 learner runs (3 personas x 3 prior-knowledge levels) answering the 9 skills-check items in docs/skills-check/items.json, then reviewed each item. The same agent and model did both phases.",
+    "limitations": [
+      "Single agent, single model: the persona answers and the item review come from the same model, so there is no independent second judge and no agreement figure.",
+      "The agent read items.json, including the answer key and feedback, before role-playing. Persona answers are a judgment of how such a learner would plausibly answer, not a blind attempt.",
+      "The agent may share a model family with the agent that wrote the items.",
+      "Nine runs cannot show learning gains or statistical significance."
+    ],
+    "items_file": "docs/skills-check/items.json",
+    "answer_letters": "A, B, C follow the option order in items.json, which is also the on-screen order"
+  },
+  "runs": [
+    {
+      "persona": "mei",
+      "level": "none",
+      "answers": { "g1": "A", "g2": "B", "g3": "B", "w1": "B", "w2": "B", "w3": "B", "p1": "B", "p2": "B", "p3": "C" },
+      "reasons": {
+        "g1": "The first option explains how the extension works, so it sounds like the right one.",
+        "g2": "I'd rename the file so it shows the article title.",
+        "g3": "I'd delete the extra copy, like I would with a duplicate file.",
+        "w1": "Word has a Get Add-ins button, so I'd look there.",
+        "w2": "That text looks broken, so I'd insert the citation again.",
+        "w3": "I'd type the page number right after the citation.",
+        "p1": "Maybe free accounts don't get files on a second device.",
+        "p2": "I'd fix the entry in the bibliography and hope the rest stays the same.",
+        "p3": "We already share folders on Dropbox, so that's the easy route."
+      }
+    },
+    {
+      "persona": "mei",
+      "level": "some",
+      "answers": { "g1": "A", "g2": "C", "g3": "A", "w1": "B", "w2": "B", "w3": "A", "p1": "C", "p2": "B", "p3": "A" },
+      "reasons": {
+        "g1": "In Mendeley the desktop app had to be open too.",
+        "g2": "Saving from the journal page always gave me full metadata before.",
+        "g3": "Mendeley had a merge-duplicates tool, so I'd look for the same here.",
+        "w1": "Mendeley Cite came from the Word add-in store, so I'd go there.",
+        "w2": "I haven't seen that text before; it looks corrupted.",
+        "w3": "Mendeley's citation box had a page field, so I'd use the dialog.",
+        "p1": "I'd guess both computers need to be on for files to copy.",
+        "p2": "I'd edit the one entry; it's only one tweak.",
+        "p3": "A private group sounds right for a lab."
+      }
+    },
+    {
+      "persona": "mei",
+      "level": "expert",
+      "answers": { "g1": "A", "g2": "A", "g3": "A", "w1": "A", "w2": "A", "w3": "A", "p1": "A", "p2": "A", "p3": "B" },
+      "reasons": {
+        "g1": "The connector needs the desktop app running.",
+        "g2": "Create Parent Item and paste the DOI.",
+        "g3": "Merge in Duplicate Items.",
+        "w1": "Reinstall the add-in from Zotero's Cite settings.",
+        "w2": "That's field codes showing; Alt+F9 fixes the view.",
+        "w3": "Type the page in the citation dialog.",
+        "p1": "File sync is separate from data sync.",
+        "p2": "Back up, then unlink citations for the final copy.",
+        "p3": "An open group lets everyone in the lab join easily; I didn't know open groups can't share files."
+      }
+    },
+    {
+      "persona": "tom",
+      "level": "none",
+      "answers": { "g1": "A", "g2": "C", "g3": "B", "w1": "C", "w2": "B", "w3": "B", "p1": "C", "p2": "B", "p3": "C" },
+      "reasons": {
+        "g1": "The option says the extension needs the app, which makes technical sense.",
+        "g2": "I'd just save it again from the website; that's what worked in the browser.",
+        "g3": "I have 400 sources; I'd delete the extra one and move on.",
+        "w1": "When a plugin breaks, I reinstall the whole program.",
+        "w2": "It looks like the citation got corrupted.",
+        "w3": "I'd type the page by hand; it's faster.",
+        "p1": "The laptop was probably off when the desktop synced.",
+        "p2": "I'd edit the bibliography text directly before the deadline.",
+        "p3": "Our lab already uses a shared Dropbox."
+      }
+    },
+    {
+      "persona": "tom",
+      "level": "some",
+      "answers": { "g1": "A", "g2": "A", "g3": "A", "w1": "C", "w2": "A", "w3": "A", "p1": "A", "p2": "A", "p3": "B" },
+      "reasons": {
+        "g1": "Same as EndNote's capture: the desktop app has to be running.",
+        "g2": "Reference managers can look up metadata from a DOI.",
+        "g3": "EndNote merges duplicates, and merging keeps my groups.",
+        "w1": "EndNote's Word plugin came with the app, so I'd reinstall the app.",
+        "w2": "I've seen field codes in Word with EndNote; it's a display toggle.",
+        "w3": "EndNote lets me add pages in the citation editor.",
+        "p1": "Files and data sync separately; maybe I'm over quota.",
+        "p2": "EndNote has convert-to-plain-text for the final copy; I'd keep a backup.",
+        "p3": "A public open group sounds like the easiest way for everyone to join."
+      }
+    },
+    {
+      "persona": "tom",
+      "level": "expert",
+      "answers": { "g1": "A", "g2": "A", "g3": "A", "w1": "A", "w2": "A", "w3": "A", "p1": "A", "p2": "A", "p3": "A" },
+      "reasons": {
+        "g1": "The connector talks to the running desktop app.",
+        "g2": "Create Parent Item with the DOI.",
+        "g3": "Merge from Duplicate Items.",
+        "w1": "Settings, Cite, Word Processors, reinstall.",
+        "w2": "Field codes are showing; toggle them off.",
+        "w3": "Locator in the citation dialog.",
+        "p1": "Check zotero.org, then quota, then linked files.",
+        "p2": "Unlink citations on a backed-up copy.",
+        "p3": "Private group with file sharing; open groups can't share files."
+      }
+    },
+    {
+      "persona": "ana",
+      "level": "none",
+      "answers": { "g1": "B", "g2": "B", "g3": "B", "w1": "B", "w2": "B", "w3": "B", "p1": "B", "p2": "B", "p3": "C" },
+      "reasons": {
+        "g1": "My work network blocks things, so I'd assume the connection is down.",
+        "g2": "I'd rename the file so I can find it.",
+        "g3": "I'd delete the second copy.",
+        "w1": "I'd look in Word's add-ins menu.",
+        "w2": "Something broke; I'd put the citation in again.",
+        "w3": "I'd type ', p. 12' after it.",
+        "p1": "Maybe I need to pay to get files on another computer.",
+        "p2": "I'd change the text of that one entry.",
+        "p3": "We share files through Dropbox at work."
+      }
+    },
+    {
+      "persona": "ana",
+      "level": "some",
+      "answers": { "g1": "A", "g2": "C", "g3": "A", "w1": "B", "w2": "A", "w3": "A", "p1": "B", "p2": "B", "p3": "C" },
+      "reasons": {
+        "g1": "Mendeley needed the desktop app open too.",
+        "g2": "Saving from the publisher's page is how I always got the details.",
+        "g3": "Merging keeps everything, I remember that from Mendeley.",
+        "w1": "Mendeley Cite came from the Word store, so I'd check there.",
+        "w2": "I've seen the field-code view before; it's just a display.",
+        "w3": "I'd add the page in the citation box.",
+        "p1": "Mendeley charged for more storage, so probably a paid plan.",
+        "p2": "I'd fix the one entry by hand.",
+        "p3": "A shared Dropbox folder is what my team uses."
+      }
+    },
+    {
+      "persona": "ana",
+      "level": "expert",
+      "answers": { "g1": "A", "g2": "A", "g3": "A", "w1": "A", "w2": "A", "w3": "A", "p1": "A", "p2": "A", "p3": "B" },
+      "reasons": {
+        "g1": "The desktop app isn't running.",
+        "g2": "Create Parent Item and look up the DOI.",
+        "g3": "Merge, don't delete.",
+        "w1": "Reinstall from Zotero's Cite settings, then restart Word.",
+        "w2": "Field codes view; nothing is lost.",
+        "w3": "Type the page in the dialog.",
+        "p1": "File sync is separate; check quota and linked files.",
+        "p2": "Back up, then unlink.",
+        "p3": "I'd pick the open group so nobody needs an invite."
+      }
+    }
+  ],
+  "item_review": {
+    "reviewer": "The same agent that produced the runs above (no independent second judge).",
+    "structural_checks": {
+      "note": "Deterministic checks on items.json and docs/skills-check/check.js; these do not depend on the simulation.",
+      "keyed_option_position": "The keyed answer is option A in 9 of 9 items, and check.js renders options in file order (no shuffling).",
+      "keyed_option_longest": "The keyed answer is the longest option in 7 of 9 items (all except p2 and p3)."
+    },
+    "items": [
+      { "item": "g1", "verdict": "revise", "issues": "keyed option A contains the explanation (the extension talks to the app), which cues the answer; even no-prior runs chose it", "notes": "Move the explanation into the feedback and keep the option short." },
+      { "item": "g2", "verdict": "revise", "issues": "option C's own feedback says it can work, so two options are defensible for the stem as written", "notes": "Ask for the fastest fix that always works, or make C clearly worse." },
+      { "item": "g3", "verdict": "keep", "issues": "none", "notes": "Delete (B) drew the no-prior runs, which is the error the lesson targets." },
+      { "item": "w1", "verdict": "keep", "issues": "none", "notes": "The Word add-in store (B) drew runs with Mendeley experience, a realistic transfer error worth keeping as a distractor." },
+      { "item": "w2", "verdict": "keep", "issues": "none", "notes": "Corrupted data (B) drew novices; the item separates levels well." },
+      { "item": "w3", "verdict": "keep", "issues": "none", "notes": "Hand-typing the page (B) is the realistic mistake and drew the no-prior runs." },
+      { "item": "p1", "verdict": "revise", "issues": "keyed option A bundles three causes and is much longer than the distractors (122 characters vs 53 and 59)", "notes": "Shorten A to one cause or make the distractors equally specific." },
+      { "item": "p2", "verdict": "keep", "issues": "none", "notes": "Direct bibliography edit (B) drew 5 of 9 runs, the same error the item's feedback names from the support data." },
+      { "item": "p3", "verdict": "keep", "issues": "hardest item; 2 of 3 expert runs chose the open group (B)", "notes": "The difficulty comes from a real documented limitation that the group-libraries lesson already states, so the item is fair as written." }
+    ]
+  }
+}

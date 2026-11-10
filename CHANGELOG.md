@@ -48,7 +48,18 @@ The full review is [`evaluation/agent-review.md`](evaluation/agent-review.md) (m
 
 **Deferred (noted, not fixed):** flow 3's macOS fix step bundles four sub-steps — the simulated dashboard recommends giving the permission grant its own screen; deferred as a content-density improvement (recorded in DECISIONS.md D12).
 
+## [1.1.0] - 2026-11-11
+
+### Changed
+- Replaced the model-API simulated-learner pipeline with an agent-simulated run done in the build environment, with no API key. One AI agent role-played 9 learner runs (3 personas × 3 prior-knowledge levels) on the skills check and then reviewed each item. Results and raw answers are in `evaluation/agent-simulation/`. Labeled agent-simulated, single model, not blind; never presented as human results.
+- `evaluation/METHODS.md`, README and STATUS.md describe what was actually run.
+
+### Removed
+- `evaluation/run-simulations.mjs`, `.env.example` and the two simulation npm scripts. No part of the repo needs a model API key.
+
+### Evaluation findings (not yet acted on)
+- The keyed answer is option A in all 9 skills-check items and is the longest option in 7 of 9. The item review marked g1, g2 and p1 "revise".
+
 ## Unreleased
-- Pending: AI-simulated learner runs + item analysis (requires API keys; `npm run eval:pending`).
 - Pending: usability test with 3–5 graduate students (protocol prepared).
 - Pending: manual VoiceOver check (protocol prepared; automation unavailable on the build OS).

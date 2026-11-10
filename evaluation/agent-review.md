@@ -4,6 +4,8 @@
 
 Method label for citing these findings anywhere: **Agent review**.
 
+*Note added 2026-11-11: this is a dated review. The API-key simulation pipeline it mentions in §5 was later removed and replaced by an agent-simulated run; see [`evaluation/METHODS.md`](METHODS.md) §5.*
+
 ---
 
 ## 0. What this review did

@@ -4,7 +4,7 @@ An unofficial customer education academy for Zotero (the free, open-source refer
 
 **[Live site](https://iwyusdaz.github.io/research-tools-academy/)** · **[Support analysis](analysis/support-analysis.md)** · **[Evaluation methods](evaluation/METHODS.md)** · Role: Sole designer
 
-**Evaluation status:** Automated accessibility testing and agent-based design reviews are complete. AI-simulated learner and review-panel evaluations are pending. No real learners have tested this yet. See [evaluation/METHODS.md](evaluation/METHODS.md).
+**Evaluation status:** Automated accessibility testing and agent-based design reviews are complete. An agent-simulated learner run and item review of the skills check is complete (one AI agent played every learner and reviewed every item; not human results). No real learners have tested this yet. See [evaluation/METHODS.md](evaluation/METHODS.md).
 
 ---
 
@@ -56,7 +56,7 @@ Every lesson is written from the official Zotero documentation and stamped *"Las
 ## Evidence and evaluation
 
 - **What was measured:** support-question frequencies and fix routes (real, n=145); keyboard-only task completion of both tools (46 scripted checks, all passing); axe-core audits of every page (0 critical/serious); a structured **Agent review** ([full report](evaluation/agent-review.md)), whose 13 findings were triaged and fixed on 2026-10-26 (see [CHANGELOG.md](CHANGELOG.md)).
-- **What it can and cannot show:** the analysis shows what people ask for, not true incidence (forum posters are a biased sample — stated in the analysis). The keyboard tests prove the flows work, not that learners succeed. The Agent review shares the underlying model with the author — labeled as such. Simulated-learner runs and the review panel are **pipeline-ready but pending** (`npm run eval:pending`; never faked). No real learners have tested this.
+- **What it can and cannot show:** the analysis shows what people ask for, not true incidence (forum posters are a biased sample, as stated in the analysis). The keyboard tests prove the flows work, not that learners succeed. The Agent review shares the underlying model with the author, and is labeled as such. The [agent-simulated learner run](evaluation/agent-simulation/summary.md) (9 persona runs plus an item review, all by one AI agent that had seen the answer key) can flag item problems but is not learner evidence. No real learners have tested this.
 - **What it changed:** the 40% education-fixable finding shaped the two "writing" job aids; the week-1 cluster justified front-loading the Getting started path; the product-issue share shaped the troubleshooting tool's honest forum exits. Evaluation-driven revisions are recorded in [CHANGELOG.md](CHANGELOG.md).
 
 ## Accessibility
@@ -68,7 +68,7 @@ Every lesson is written from the official Zotero documentation and stamped *"Las
 
 ## What I'd do differently / next steps
 
-1. **Run the pending evaluations** (API keys → `npm run eval:pending`), then the usability test with 3–5 grad students using the [prepared protocol](evaluation/human-protocol/usability-test-script.md).
+1. **Revise the skills check from the agent-simulated item review** (shuffle option order so the key is not always A, and fix the answer cues in g1, g2 and p1), then run the usability test with 3 to 5 grad students using the [prepared protocol](evaluation/human-protocol/usability-test-script.md).
 2. **Verify lessons in the real app** and replace schematics with annotated screenshots where they help (the shot lists are implicit in each lesson's steps).
 3. **Deflection readout needs a deployment** — the metrics plan is designed for a staggered pilot with a university library ([launch plan](docs/strategy/launch-plan.md)).
 

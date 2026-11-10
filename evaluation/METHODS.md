@@ -10,11 +10,11 @@
 | Accessibility audit (automated) | axe-core 4.11.1, WCAG 2.1 A/AA + best practice, per page + both tools | **Complete** | summary below; raw JSON via the audit script |
 | Keyboard task tests | Playwright 1.57 scripted keyboard-only task completion + 320 px reflow | **Complete** (46/46) | `evaluation/keyboard-tests.mjs` |
 | Design review | **Agent review** — structured heuristic + cognitive-walkthrough review by a reviewer agent that did not build the repo | **Complete** — artifact committed 2026-10-26; findings triaged and fixes applied | [`evaluation/agent-review.md`](agent-review.md) |
-| Simulated learners + item analysis | AI-simulated personas (3 personas × 3 levels, 9 runs) + two-model item review | **PENDING: requires API key** | `evaluation/run-simulations.mjs`; outputs placeholder in `evaluation/output/` |
+| Simulated learners + item analysis | **Agent-simulated**: one AI agent role-played 3 personas × 3 levels (9 runs), then reviewed each item; same single model for both phases | **Complete** (2026-11-11), with the limitations in §5 | [`evaluation/agent-simulation/summary.md`](agent-simulation/summary.md), raw data in [`runs.json`](agent-simulation/runs.json) |
 | Usability test with real users | 3–5 grad students, scripted tasks, consented | **Not run** — protocol prepared | `evaluation/human-protocol/` |
 | Screen reader review | Manual VoiceOver protocol (automation unavailable — see Limitations) | **Not run** — protocol prepared | `evaluation/human-protocol/voiceover-manual-check.md` |
 
-**Plain-language status (also stated in the README):** automated accessibility testing and agent-based design reviews are complete. AI-simulated learner and review-panel evaluations are pending. No real learners have tested this yet.
+**Plain-language status (also stated in the README):** automated accessibility testing and agent-based design reviews are complete. An agent-simulated learner run and item review of the skills check is complete; one AI agent played every learner and reviewed every item, so these are not human results. No real learners have tested this yet.
 
 ## 1. Support-needs analysis (real data)
 
@@ -46,16 +46,23 @@ A structured review of every lesson, both tools and the strategy documents, perf
 
 **Limitation, stated plainly:** the reviewer agent may run on the same underlying model family as the authoring agent, so this is *not* an independent expert review. It is labeled "Agent review" everywhere it appears. It cannot substitute for the usability test or an expert (Zotero-experienced) review, both of which remain open to the owner.
 
-## 5. Simulated learners + item analysis (pipeline ready, pending)
+## 5. Simulated learners + item analysis (agent-simulated, complete)
 
-`evaluation/run-simulations.mjs` (run with `npm run eval:pending`):
+Run on 2026-11-11 by one AI agent (Claude) inside the build environment. No API key and no external model service was used. Results: [`evaluation/agent-simulation/summary.md`](agent-simulation/summary.md); every answer, persona reason and item verdict is in [`runs.json`](agent-simulation/runs.json).
 
-- **Phase 1 — 9 simulated runs:** MODEL_A role-plays 3 personas (Mei/Tom/Ana from the design plan) × 3 prior-knowledge levels (none / some / expert), answering the 9 skills-check scenarios.
-- **Phase 2 — item analysis:** MODEL_B and MODEL_C independently review each item's answer distribution against the key and flag ambiguity or quality problems; agreement between the two judges is reported per item and overall. A model never reviews its own output (A produces; B and C review).
-- **Reproducibility:** every prompt, persona spec, response and setting is saved to `evaluation/output/simulations-<timestamp>/raw.json`; `summary.md` carries the human-readable tables. Models are whatever the three `.env` slots name; ideally from different providers.
-- **Safety rails:** missing or placeholder `.env` values → exit 1, **zero network calls**; `--dry-run` exercises the full pipeline with stub responses into `dry-run/` labeled **DRY RUN – NOT REAL RESULTS** (never cited as results).
+- **Phase 1, 9 simulated runs:** the agent role-played 3 personas (Mei, Tom, Ana from the design plan) × 3 prior-knowledge levels (none / some / expert), answering the 9 skills-check scenarios with a one-sentence reason per answer.
+- **Phase 2, item review:** the same agent reviewed each item's answer distribution against the key and gave a keep / revise / replace verdict.
+- **Structural checks:** key position and option length were checked directly in `items.json` and `check.js`; these do not depend on the simulation.
 
-**Can show:** ambiguous items, distractors real users would pick, confusing wording — inputs to item revision. **Cannot show:** learning gains, statistical significance, or "validated with users." AI personas already know the content; the check measures item behavior, not learning. Per the shared standard, results are never described as user validation.
+**Results in brief:** the keyed answer is option A in all 9 items (options are not shuffled) and is the longest option in 7 of 9, so a test-wise learner could score without knowing Zotero. The item review marked g1, g2 and p1 "revise" (an answer cue in g1 and p1, two defensible options in g2) and the other 6 "keep". The items have not been changed yet.
+
+**Limitations, stated plainly:**
+
+- **Single agent, single model.** The original design had three separately configured models: one played the personas and two others judged the items independently, with agreement reported. That cross-model blind design could not be reproduced here. One model did both phases, so there is no independent judge and no agreement figure.
+- **Not blind.** The agent read the answer key and feedback before role-playing, so persona answers are a judgment of plausible learner behavior, not a blind attempt.
+- The agent may share a model family with the agent that wrote the items.
+
+**Can show:** answer cues, ambiguous items and confusing wording, as inputs to item revision. **Cannot show:** learning gains, real item difficulty, statistical significance, or "validated with users." These are agent-simulated results and are never described as human or real-learner results.
 
 ## 6. Usability test with real users (not run)
 

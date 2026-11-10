@@ -1,6 +1,6 @@
 # Status
 
-*Last updated: 2026-10-26 (revision round from the agent review).*
+*Last updated: 2026-11-11 (agent-simulated learner run replaced the API-key pipeline).*
 
 ## Live
 
@@ -18,7 +18,7 @@
 - [x] Skills check: 9 scenario items, per-option feedback → lessons, results by path, nothing stored
 - [x] Job aids: 2 cards (HTML + one-page PDF each)
 - [x] Strategy: metrics plan, simulated dashboard (labeled), maintenance plan, launch plan, + issue template
-- [x] Evaluation: METHODS.md; axe audits; keyboard tests (46/46 after the review-revision extensions); Agent review **complete** — artifact committed at `evaluation/agent-review.md` (2026-10-26); human protocol (5 files); pending pipeline (`run-simulations.mjs`, `.env.example` per spec, dry-run verified, no-key exit verified); output placeholder marked PENDING
+- [x] Evaluation: METHODS.md; axe audits; keyboard tests (46/46 after the review-revision extensions); Agent review **complete**, artifact committed at `evaluation/agent-review.md` (2026-10-26); human protocol (5 files); agent-simulated learner run and item review complete (2026-11-11, `evaluation/agent-simulation/`, single agent, not human results)
 - [x] Repo docs: README case study (with exact evaluation-status notice), LICENSE (CC BY 4.0), LICENSE-CODE (MIT), ATTRIBUTION.md, CHANGELOG.md, DECISIONS.md, STATUS.md, DISCLAIMER include on every page
 - [x] Published: repo pushed, Pages enabled and built; live verification 2026-10-25:
   - linkcheck across the live site: 31 pages, **0 broken links**
@@ -26,12 +26,11 @@
   - live smoke tests of both interactive tools: render, focus management, no JS errors
   - keyboard tests: 46/46 (local, served `docs/`; extended 2026-10-26 for chooser focus, live-region status and Back-after-check assertions)
   - gitleaks: working tree + full git history clean; no `.env` ever committed; no files > 50 MB
-  - pipeline: `npm run eval:pending` exits 1 with "PENDING: requires API key" and zero network; `npm run eval:dry-run` writes labeled dry-run output only
 - [ ] Owner: upload `docs/assets/social-preview.png` (1280×640) in repo Settings → General → Social preview (no API for that step)
 
 ## Pending (owner actions)
 
-- [ ] Add API keys to `.env` (copy `.env.example`) and run `npm run eval:pending` — simulated learners + item analysis
+- [ ] Revise the skills check from the agent-simulated item review (key is option A in 9/9 items; g1, g2, p1 marked revise)
 - [ ] Run the usability test with 3–5 grad students (`evaluation/human-protocol/`)
 - [ ] Run the manual VoiceOver check (`evaluation/human-protocol/voiceover-manual-check.md`)
 - [ ] Optional: verify lessons in the real Zotero app and add annotated screenshots

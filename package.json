@@ -5,8 +5,6 @@
   "description": "Unofficial customer education academy for Zotero, built from an analysis of 100+ real public support questions.",
   "type": "module",
   "scripts": {
-    "eval:pending": "node evaluation/run-simulations.mjs",
-    "eval:dry-run": "node evaluation/run-simulations.mjs --dry-run",
     "test:keyboard": "node evaluation/keyboard-tests.mjs",
     "verify": "node evaluation/keyboard-tests.mjs"
   },
